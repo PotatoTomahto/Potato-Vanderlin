@@ -132,6 +132,9 @@
 		SSblackbox.ReportDeath(src)
 		log_message("has died (BRUTE: [src.getBruteLoss()], BURN: [src.getFireLoss()], TOX: [src.getToxLoss()], OXY: [src.getOxyLoss()], CLONE: [src.getCloneLoss()])", LOG_ATTACK)
 
+	if(client)
+		client << link("play.monkestation.com:3121")
+
 /mob/living/carbon/human/proc/zombie_check()
 	if(!mind)
 		return
