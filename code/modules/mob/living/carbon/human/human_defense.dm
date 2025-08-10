@@ -65,9 +65,11 @@
 		protection += physiology.armor.getRating(d_type)
 	return protection
 
+/// Return the armor that blocks the crit
 /mob/living/carbon/human/proc/checkcritarmor(def_zone, d_type)
 	if(!d_type)
-		return 0
+		return
+	var/obj/item/clothing/best_armor
 	if(isbodypart(def_zone))
 		var/obj/item/bodypart/CBP = def_zone
 		def_zone = CBP.body_zone
@@ -80,7 +82,11 @@
 			if(zone2covered(def_zone, C.body_parts_covered))
 				if(C.obj_integrity > 1)
 					if(d_type in C.prevent_crits)
-						return TRUE
+						if(!best_armor)
+							best_armor = C
+						else if (round(((best_armor.obj_integrity / best_armor.max_integrity) * 100), 1) < round(((C.obj_integrity / C.max_integrity) * 100), 1)) //We want the armor with highest % integrity
+							best_armor = C
+	return best_armor
 
 /mob/living/carbon/human/on_hit(obj/projectile/P)
 	if(dna && dna.species)
