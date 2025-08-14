@@ -21,6 +21,6 @@
 	seed_identity = "coffee seeds"
 
 /datum/plant_def/coffee/set_genetic_tendencies(datum/plant_genetics/base_genetics)
-	base_genetics.quality_trait = TRAIT_GRADE_EXCELLENT  // Coffee is prized for quality
+	base_genetics.quality_trait = TRAIT_GRADE_GOOD  // Coffee is prized for quality
 	base_genetics.disease_resistance = TRAIT_GRADE_AVERAGE  // Susceptible to various diseases
 	base_genetics.water_efficiency = TRAIT_GRADE_AVERAGE  // Needs consistent moisture

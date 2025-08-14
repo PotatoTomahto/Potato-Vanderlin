@@ -792,13 +792,12 @@
 		improvement_chance += 10
 	if(pollination_time > 0)
 		improvement_chance += 10
-	if(crop_quality >= QUALITY_GOLD)
+	if(crop_quality >= QUALITY_SILVER) // the rich get richer
 		improvement_chance += 20
 
-	// Try to improve each trait
+	// Improve two random traits
 	if(prob(improvement_chance))
-		improved.mutate_trait()
-		improved.mutate_trait()
+		improved.mutate_traits(amount = 2)
 
 	improved.generation += 1
 	return improved
@@ -1057,23 +1056,12 @@
 	var/base_amount = rand(plant.produce_amount_min, plant.produce_amount_max)
 
 	// Genetics yield bonus - more significant impact
-	var/genetics_yield_bonus = round((plant_genetics.yield_trait - TRAIT_GRADE_AVERAGE) / 5) // Every 5 points = +1 produce
-
-	// Quality modifiers
-	var/quality_modifier = 0
-	if(!istype(plant, /datum/plant_def/alchemical))
-		switch(crop_quality)
-			if(QUALITY_BRONZE)
-				quality_modifier = 1
-			if(QUALITY_SILVER)
-				quality_modifier = 2
-			if(QUALITY_GOLD)
-				quality_modifier = 3
-			if(QUALITY_DIAMOND)
-				quality_modifier = 4
+	var/genetics_yield_bonus = max(round((plant_genetics.yield_trait - TRAIT_GRADE_AVERAGE) / 25), 0) // Every 25 points = +1 produce
 
 	// Calculate final yield amount
-	var/spawn_amount = max(base_amount + modifier + quality_modifier + genetics_yield_bonus, 1)
+	var/spawn_amount = max(base_amount + modifier + genetics_yield_bonus, 1)
+
+	var/datum/plant_genetics/new_genetics = improve_genetics_naturally()
 
 	for(var/i in 1 to spawn_amount)
 		var/obj/item/produce = new plant.produce_type(loc)
@@ -1081,16 +1069,7 @@
 			var/obj/item/reagent_containers/food/snacks/produce/P = produce
 			P.set_quality(crop_quality)
 			// Pass genetics to the produce for seed extraction
-			P.source_genetics = plant_genetics.copy()
-
-	if(plant_genetics && plant_genetics.yield_trait > TRAIT_GRADE_GOOD)
-		var/seed_chance = (plant_genetics.yield_trait - TRAIT_GRADE_GOOD) * 2 // Up to 50% chance at max yield
-		if(prob(seed_chance))
-			// Create improved genetics for the seed
-			var/datum/plant_genetics/new_genetics = improve_genetics_naturally()
-			var/obj/item/neuFarm/seed/bonus_seed = new(loc, new_genetics)
-			bonus_seed.plant_def_type = plant.type
-			bonus_seed.forceMove(loc)
+			P.source_genetics = new_genetics.copy()
 
 	// Reset produce state
 	produce_ready = FALSE

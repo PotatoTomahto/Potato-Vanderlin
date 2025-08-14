@@ -22,6 +22,6 @@
 	seed_identity = "tea seeds"
 
 /datum/plant_def/tea/set_genetic_tendencies(datum/plant_genetics/base_genetics)
-	base_genetics.quality_trait = TRAIT_GRADE_EXCELLENT  // Tea is prized for quality
+	base_genetics.quality_trait = TRAIT_GRADE_GOOD  // Tea is prized for quality
 	base_genetics.disease_resistance = TRAIT_GRADE_GOOD  // Natural compounds provide some resistance
 	base_genetics.water_efficiency = TRAIT_GRADE_GOOD  // Adapted to various climates

@@ -8,7 +8,7 @@
 	uproot_loot = list(/obj/item/grown/log/tree/stick)
 	perennial = TRUE
 	produce_amount_min = 1
-	produce_amount_max = 3
+	produce_amount_max = 2
 	maturation_time = FAST_GROWING
 	water_drain_rate = 1 / (2 MINUTES)
 	can_grow_underground = TRUE
@@ -22,7 +22,7 @@
 	potassium_production = 12
 
 /datum/plant_def/alchemical/set_genetic_tendencies(datum/plant_genetics/base_genetics)
-	base_genetics.quality_trait = TRAIT_GRADE_EXCELLENT  // Herbs are prized for quality
+	base_genetics.quality_trait = TRAIT_GRADE_GOOD  // Herbs are prized for quality
 	base_genetics.disease_resistance = TRAIT_GRADE_GOOD  // Natural compounds deter pests
 
 /datum/plant_def/alchemical/atropa
@@ -55,7 +55,7 @@
 
 /datum/plant_def/alchemical/symphitum/set_genetic_tendencies(datum/plant_genetics/base_genetics)
 	..()
-	base_genetics.yield_trait = TRAIT_GRADE_EXCELLENT  // Comfrey grows vigorously
+	base_genetics.yield_trait = TRAIT_GRADE_GOOD  // Comfrey grows vigorously
 
 /datum/plant_def/alchemical/taraxacum
 	name = "taraxacum"
@@ -89,7 +89,6 @@
 /datum/plant_def/alchemical/urtica/set_genetic_tendencies(datum/plant_genetics/base_genetics)
 	..()
 	base_genetics.disease_resistance = TRAIT_GRADE_EXCELLENT  // Stinging = pest resistant
-	base_genetics.yield_trait = TRAIT_GRADE_EXCELLENT
 
 /datum/plant_def/alchemical/calendula
 	name = "calendula"
@@ -109,7 +108,6 @@
 /datum/plant_def/alchemical/mentha/set_genetic_tendencies(datum/plant_genetics/base_genetics)
 	..()
 	base_genetics.disease_resistance = TRAIT_GRADE_EXCELLENT  // Aromatic oils repel pests
-	base_genetics.yield_trait = TRAIT_GRADE_EXCELLENT
 
 /datum/plant_def/alchemical/salvia
 	name = "salvia"
@@ -167,10 +165,6 @@
 	phosphorus_requirement = 25
 	potassium_requirement = 35
 	seed_identity = "rosa seeds"
-
-/datum/plant_def/alchemical/rosa/set_genetic_tendencies(datum/plant_genetics/base_genetics)
-	..()
-	base_genetics.quality_trait = TRAIT_GRADE_EXCELLENT  // Roses are prized for beauty
 
 /datum/plant_def/alchemical/euphorbia
 	name = "euphorbia"

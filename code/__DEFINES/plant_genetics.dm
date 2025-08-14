@@ -13,8 +13,8 @@
 // Plant growth timing constants
 #define FAST_GROWING 5 MINUTES
 #define VERY_FAST_GROWING 4 MINUTES
-#define HUNGRINESS_DEMANDING 35
-#define HUNGRINESS_NORMAL 25
+#define HUNGRINESS_DEMANDING 25
+#define HUNGRINESS_NORMAL 20
 #define HUNGRINESS_TINY 15
 
 // Genetic trait definitions
@@ -25,11 +25,11 @@
 #define TRAIT_WATER_EFFICIENCY 5
 #define TRAIT_COLD_RESISTANCE 6
 
-// Trait grades (0-100, higher is better)
+// Trait grades (higher is better)
 #define TRAIT_GRADE_POOR 20
 #define TRAIT_GRADE_AVERAGE 50
-#define TRAIT_GRADE_GOOD 70
-#define TRAIT_GRADE_EXCELLENT 90
+#define TRAIT_GRADE_GOOD 80
+#define TRAIT_GRADE_EXCELLENT 110
 
 // Mutation chances
 #define BASE_MUTATION_CHANCE 1  // 1% base chance

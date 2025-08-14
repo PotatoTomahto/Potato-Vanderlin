@@ -2,8 +2,8 @@
 	name = "swampweed"
 	icon_state = "swampweed"
 	produce_type = /obj/item/reagent_containers/food/snacks/produce/swampweed
-	produce_amount_min = 3
-	produce_amount_max = 5
+	produce_amount_min = 2
+	produce_amount_max = 4
 	water_drain_rate = 0
 	plant_family = FAMILY_HERB
 	nitrogen_requirement = 15
@@ -22,8 +22,8 @@
 	name = "westleach leaf"
 	icon_state = "westleach"
 	produce_type = /obj/item/reagent_containers/food/snacks/produce/westleach
-	produce_amount_min = 3
-	produce_amount_max = 5
+	produce_amount_min = 2
+	produce_amount_max = 4
 	maturation_nutrition = 30
 	maturation_time = FAST_GROWING
 	produce_time = 2 MINUTES

@@ -4,7 +4,7 @@
 	produce_type = /obj/item/reagent_containers/food/snacks/produce/sugarcane
 	perennial = TRUE
 	produce_amount_min = 2
-	produce_amount_max = 4
+	produce_amount_max = 3
 	maturation_nutrition = HUNGRINESS_DEMANDING
 	plant_family = FAMILY_GRAIN
 	nitrogen_requirement = 60  // Grains are heavy N feeders
@@ -16,15 +16,14 @@
 	seed_identity = "sugarcane seeds"
 
 /datum/plant_def/sugarcane/set_genetic_tendencies(datum/plant_genetics/base_genetics)
-	base_genetics.yield_trait = TRAIT_GRADE_EXCELLENT
 	base_genetics.water_efficiency = TRAIT_GRADE_POOR  // Loves water
 
 /datum/plant_def/wheat
 	name = "wheat stalks"
 	icon_state = "wheat"
 	produce_type = /obj/item/natural/chaff/wheat
-	produce_amount_min = 3
-	produce_amount_max = 5
+	produce_amount_min = 2
+	produce_amount_max = 4
 	uproot_loot = list(/obj/item/natural/fibers, /obj/item/natural/fibers)
 	maturation_nutrition = 30
 	maturation_time = FAST_GROWING
@@ -39,15 +38,14 @@
 	seed_identity = "wheat seeds"
 
 /datum/plant_def/wheat/set_genetic_tendencies(datum/plant_genetics/base_genetics)
-	base_genetics.yield_trait = TRAIT_GRADE_EXCELLENT
 	base_genetics.quality_trait = TRAIT_GRADE_GOOD
 
 /datum/plant_def/oat
 	name = "oat stalks"
 	icon_state = "oat"
 	produce_type = /obj/item/natural/chaff/oat
-	produce_amount_min = 3
-	produce_amount_max = 5
+	produce_amount_min = 2
+	produce_amount_max = 4
 	uproot_loot = list(/obj/item/natural/fibers, /obj/item/natural/fibers)
 	maturation_nutrition = 30
 	maturation_time = FAST_GROWING

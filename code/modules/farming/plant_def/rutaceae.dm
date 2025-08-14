@@ -5,7 +5,7 @@
 	uproot_loot = list(/obj/item/grown/log/tree/small)
 	perennial = TRUE
 	produce_amount_min = 2
-	produce_amount_max = 4
+	produce_amount_max = 3
 	maturation_nutrition = HUNGRINESS_DEMANDING
 	plant_family = FAMILY_RUTACEAE  // Citrus family
 	nitrogen_requirement = 55
@@ -17,7 +17,6 @@
 	seed_identity = "tangerine seeds"
 
 /datum/plant_def/tangerine/set_genetic_tendencies(datum/plant_genetics/base_genetics)
-	base_genetics.quality_trait = TRAIT_GRADE_GOOD
 	base_genetics.water_efficiency = TRAIT_GRADE_POOR  // Citrus needs lots of water
 
 /datum/plant_def/lime
@@ -27,7 +26,7 @@
 	uproot_loot = list(/obj/item/grown/log/tree/small)
 	perennial = TRUE
 	produce_amount_min = 2
-	produce_amount_max = 4
+	produce_amount_max = 3
 	maturation_nutrition = HUNGRINESS_DEMANDING
 	plant_family = FAMILY_RUTACEAE
 	nitrogen_requirement = 0
@@ -39,7 +38,6 @@
 	seed_identity = "lime seeds"
 
 /datum/plant_def/lime/set_genetic_tendencies(datum/plant_genetics/base_genetics)
-	base_genetics.quality_trait = TRAIT_GRADE_GOOD
 	base_genetics.cold_resistance = TRAIT_GRADE_POOR  // Tropical citrus
 
 /datum/plant_def/lemon
@@ -49,7 +47,7 @@
 	uproot_loot = list(/obj/item/grown/log/tree/small)
 	perennial = TRUE
 	produce_amount_min = 2
-	produce_amount_max = 4
+	produce_amount_max = 3
 	maturation_nutrition = HUNGRINESS_DEMANDING
 	plant_family = FAMILY_RUTACEAE
 	nitrogen_requirement = 0
@@ -61,5 +59,4 @@
 	seed_identity = "lemon seeds"
 
 /datum/plant_def/lemon/set_genetic_tendencies(datum/plant_genetics/base_genetics)
-	base_genetics.quality_trait = TRAIT_GRADE_EXCELLENT
 	base_genetics.disease_resistance = TRAIT_GRADE_GOOD  // Citric acid repels some pests
