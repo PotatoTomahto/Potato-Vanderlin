@@ -93,14 +93,14 @@
 		return
 	var/feedback = "I harvest the produce."
 	var/modifier = 0
-	var/chance_to_ruin_single = 75 - (farming_skill * 25)
-	if(prob(chance_to_ruin_single))
-		feedback = "I harvest the produce, ruining a little."
-		modifier -= 1
 	var/chance_to_get_extra = -75 + (farming_skill * 25)
+	var/chance_to_ruin_single = 75 - (farming_skill * 25)
 	if(prob(chance_to_get_extra))
 		feedback = "I harvest the produce well."
 		modifier += 1
+	else if(prob(chance_to_ruin_single))
+		feedback = "I harvest the produce, ruining a little."
+		modifier -= 1
 
 	if(has_world_trait(/datum/world_trait/dendor_fertility))
 		feedback = "Praise Dendor for our harvest is bountiful."
@@ -1111,7 +1111,13 @@
 	. = ..()
 	if(!seed_to_grow)
 		return
-	insert_plant(GLOB.plant_defs[initial(seed_to_grow.plant_def_type)])
+	var/debug_seed_genetics = initial(seed_to_grow.seed_genetics)
+	if(!debug_seed_genetics)
+		var/datum/plant_def/plant_def_instance = GLOB.plant_defs[initial(seed_to_grow.plant_def_type)]
+		debug_seed_genetics = new /datum/plant_genetics(plant_def_instance)
+	else
+		debug_seed_genetics = new debug_seed_genetics()
+	insert_plant(GLOB.plant_defs[initial(seed_to_grow.plant_def_type)], debug_seed_genetics)
 	add_growth(plant.maturation_time)
 	add_growth(plant.produce_time)
 

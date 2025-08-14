@@ -19,7 +19,8 @@
 		AddComponent(/datum/component/particle_spewer/sparkle)
 	else
 		var/datum/component/particle_spewer = GetComponent(/datum/component/particle_spewer/sparkle)
-		particle_spewer.RemoveComponent()
+		if(particle_spewer)
+			particle_spewer.RemoveComponent()
 
 /obj/item/reagent_containers/food/snacks/produce/update_overlays()
 	. = ..()

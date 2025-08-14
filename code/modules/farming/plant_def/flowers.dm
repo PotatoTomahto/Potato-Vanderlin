@@ -17,7 +17,7 @@
 	seed_identity = "sunflower seeds"
 
 /datum/plant_def/sunflower/set_genetic_tendencies(datum/plant_genetics/base_genetics)
-	base_genetics.growth_speed = TRAIT_GRADE_EXCELLENT
+	base_genetics.growth_speed = TRAIT_GRADE_GOOD
 
 /datum/plant_def/fyritiusflower
 	name = "fyritius flowers"
@@ -81,4 +81,4 @@
 
 /datum/plant_def/poppy/set_genetic_tendencies(datum/plant_genetics/base_genetics)
 	base_genetics.quality_trait = TRAIT_GRADE_GOOD
-	base_genetics.disease_resistance = TRAIT_GRADE_EXCELLENT  // Alkaloids deter pests
+	base_genetics.disease_resistance = TRAIT_GRADE_GOOD  // Alkaloids deter pests

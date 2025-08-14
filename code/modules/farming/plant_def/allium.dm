@@ -15,5 +15,5 @@
 	seed_identity = "onion seeds"
 
 /datum/plant_def/onion/set_genetic_tendencies(datum/plant_genetics/base_genetics)
-	base_genetics.disease_resistance = TRAIT_GRADE_EXCELLENT  // Onions repel pests
+	base_genetics.disease_resistance = TRAIT_GRADE_GOOD  // Onions repel pests
 	base_genetics.water_efficiency = TRAIT_GRADE_GOOD

@@ -15,7 +15,7 @@
 	seed_identity = "swampweed seeds"
 
 /datum/plant_def/swampweed/set_genetic_tendencies(datum/plant_genetics/base_genetics)
-	base_genetics.water_efficiency = TRAIT_GRADE_EXCELLENT
+	base_genetics.water_efficiency = TRAIT_GRADE_GOOD
 	base_genetics.disease_resistance = TRAIT_GRADE_GOOD
 
 /datum/plant_def/westleach

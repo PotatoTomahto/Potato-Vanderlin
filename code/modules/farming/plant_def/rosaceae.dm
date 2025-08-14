@@ -37,7 +37,7 @@
 	seed_identity = "berry seeds"
 
 /datum/plant_def/jacksberry_poison/set_genetic_tendencies(datum/plant_genetics/base_genetics)
-	base_genetics.disease_resistance = TRAIT_GRADE_EXCELLENT  // Poisonous = pest resistant
+	base_genetics.disease_resistance = TRAIT_GRADE_GOOD  // Poisonous = pest resistant
 
 /datum/plant_def/strawberry
 	name = "strawberry bush"
@@ -82,7 +82,7 @@
 
 /datum/plant_def/blackberry/set_genetic_tendencies(datum/plant_genetics/base_genetics)
 	base_genetics.disease_resistance = TRAIT_GRADE_GOOD  // Thorny = pest resistant
-	base_genetics.cold_resistance = TRAIT_GRADE_EXCELLENT
+	base_genetics.cold_resistance = TRAIT_GRADE_GOOD
 
 /datum/plant_def/raspberry
 	name = "raspberry bush"

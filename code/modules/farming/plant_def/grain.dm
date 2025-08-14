@@ -60,5 +60,5 @@
 	seed_identity = "oat seeds"
 
 /datum/plant_def/oat/set_genetic_tendencies(datum/plant_genetics/base_genetics)
-	base_genetics.cold_resistance = TRAIT_GRADE_EXCELLENT
+	base_genetics.cold_resistance = TRAIT_GRADE_GOOD
 	base_genetics.water_efficiency = TRAIT_GRADE_GOOD

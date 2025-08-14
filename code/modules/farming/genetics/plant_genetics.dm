@@ -21,8 +21,10 @@
 	/// What string to add in front of the plant_def seed_identity
 	var/seed_identity_modifier
 
-/datum/plant_genetics/New()
+/datum/plant_genetics/New(datum/plant_def/plant_def_instance)
 	. = ..()
+	if(istype(plant_def_instance))
+		plant_def_instance.set_genetic_tendencies(src)
 	// Add some random variation to base genetics
 	randomize_traits(10)  // ±10 points variation
 

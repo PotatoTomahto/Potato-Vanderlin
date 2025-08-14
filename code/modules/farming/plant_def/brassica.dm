@@ -16,4 +16,4 @@
 
 /datum/plant_def/cabbage/set_genetic_tendencies(datum/plant_genetics/base_genetics)
 	base_genetics.growth_speed = TRAIT_GRADE_GOOD
-	base_genetics.cold_resistance = TRAIT_GRADE_EXCELLENT
+	base_genetics.cold_resistance = TRAIT_GRADE_GOOD
