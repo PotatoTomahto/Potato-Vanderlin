@@ -10,6 +10,7 @@
 	produce_amount_min = 1
 	produce_amount_max = 2
 	maturation_time = FAST_GROWING
+	produce_time = SLOW_PRODUCE_TIME
 	water_drain_rate = 1 / (2 MINUTES)
 	can_grow_underground = TRUE
 	plant_family = FAMILY_HERB

@@ -26,7 +26,7 @@
 	produce_amount_max = 4
 	maturation_nutrition = 30
 	maturation_time = FAST_GROWING
-	produce_time = 2 MINUTES
+	produce_time = FAST_PRODUCE_TIME
 	plant_family = FAMILY_HERB
 	nitrogen_requirement = 0
 	phosphorus_requirement = 20

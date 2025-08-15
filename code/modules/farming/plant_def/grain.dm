@@ -6,6 +6,7 @@
 	produce_amount_min = 2
 	produce_amount_max = 3
 	maturation_nutrition = HUNGRINESS_DEMANDING
+	produce_time = SLOW_PRODUCE_TIME
 	plant_family = FAMILY_GRAIN
 	nitrogen_requirement = 60  // Grains are heavy N feeders
 	phosphorus_requirement = 0
@@ -27,7 +28,7 @@
 	uproot_loot = list(/obj/item/natural/fibers, /obj/item/natural/fibers)
 	maturation_nutrition = 30
 	maturation_time = FAST_GROWING
-	produce_time = 2 MINUTES
+	produce_time = FAST_PRODUCE_TIME
 	plant_family = FAMILY_GRAIN
 	nitrogen_requirement = 45  // Grains are heavy N feeders
 	phosphorus_requirement = 0
@@ -49,7 +50,7 @@
 	uproot_loot = list(/obj/item/natural/fibers, /obj/item/natural/fibers)
 	maturation_nutrition = 30
 	maturation_time = FAST_GROWING
-	produce_time = 2 MINUTES
+	produce_time = FAST_PRODUCE_TIME
 	plant_family = FAMILY_GRAIN
 	nitrogen_requirement = 40  // Grains are heavy N feeders
 	phosphorus_requirement = 0

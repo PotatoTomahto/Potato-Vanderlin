@@ -3,10 +3,10 @@
 #define SOIL_DECAY_TIME 20 MINUTES
 
 #define QUALITY_REGULAR 1
-#define QUALITY_BRONZE 2
-#define QUALITY_SILVER 3
-#define QUALITY_GOLD 4
-#define QUALITY_DIAMOND 5
+// #define QUALITY_BRONZE 2
+#define QUALITY_SILVER 2
+#define QUALITY_GOLD 3
+#define QUALITY_DIAMOND 4
 
 #define BLESSING_WEED_DECAY_RATE 10 / (1 MINUTES)
 #define WEED_GROWTH_RATE 3 / (1 MINUTES)
@@ -650,8 +650,8 @@
 		crop_quality = QUALITY_GOLD
 	else if(quality_points >= max_quality_points * 0.7)
 		crop_quality = QUALITY_SILVER
-	else if(quality_points >= max_quality_points * 0.5)
-		crop_quality = QUALITY_BRONZE
+	// else if(quality_points >= max_quality_points * 0.5)
+	// 	crop_quality = QUALITY_BRONZE
 	else
 		crop_quality = QUALITY_REGULAR
 
@@ -1130,7 +1130,7 @@
 #undef SOIL_DECAY_TIME
 
 #undef QUALITY_REGULAR
-#undef QUALITY_BRONZE
+// #undef QUALITY_BRONZE
 #undef QUALITY_SILVER
 #undef QUALITY_GOLD
 #undef QUALITY_DIAMOND

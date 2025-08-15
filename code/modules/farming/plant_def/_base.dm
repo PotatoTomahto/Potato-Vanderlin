@@ -9,9 +9,9 @@
 	/// Loot the plant will yield for uprooting it
 	var/list/uproot_loot
 	/// Time in ticks the plant will require to mature
-	var/maturation_time = 6 MINUTES
+	var/maturation_time = DEFAULT_GROW_TIME
 	/// Time in ticks the plant will require to make produce
-	var/produce_time = 3 MINUTES
+	var/produce_time = DEFAULT_PRODUCE_TIME
 	/// Typepath of produce to make on harvest
 	var/atom/produce_type
 	/// Amount of minimum produce to make on harvest

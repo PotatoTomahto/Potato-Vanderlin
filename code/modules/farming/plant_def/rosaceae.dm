@@ -8,6 +8,7 @@
 	produce_amount_max = 3
 	maturation_nutrition = HUNGRINESS_DEMANDING
 	maturation_time = FAST_GROWING
+	produce_time = SLOW_PRODUCE_TIME
 	plant_family = FAMILY_ROSACEAE
 	nitrogen_requirement = 0
 	phosphorus_requirement = 35
@@ -27,6 +28,7 @@
 	produce_amount_max = 3
 	maturation_nutrition = HUNGRINESS_DEMANDING
 	maturation_time = FAST_GROWING
+	produce_time = SLOW_PRODUCE_TIME
 	plant_family = FAMILY_ROSACEAE
 	nitrogen_requirement = 0
 	phosphorus_requirement = 0
@@ -49,6 +51,7 @@
 	produce_amount_max = 3
 	maturation_nutrition = HUNGRINESS_DEMANDING
 	maturation_time = FAST_GROWING
+	produce_time = SLOW_PRODUCE_TIME
 	plant_family = FAMILY_ROSACEAE
 	nitrogen_requirement = 0
 	phosphorus_requirement = 40
@@ -71,6 +74,7 @@
 	produce_amount_max = 3
 	maturation_nutrition = HUNGRINESS_DEMANDING
 	maturation_time = FAST_GROWING
+	produce_time = SLOW_PRODUCE_TIME
 	plant_family = FAMILY_ROSACEAE
 	nitrogen_requirement = 28
 	phosphorus_requirement = 0
@@ -94,6 +98,7 @@
 	produce_amount_max = 3
 	maturation_nutrition = HUNGRINESS_DEMANDING
 	maturation_time = FAST_GROWING
+	produce_time = SLOW_PRODUCE_TIME
 	plant_family = FAMILY_ROSACEAE
 	nitrogen_requirement = 0
 	phosphorus_requirement = 0
@@ -115,6 +120,7 @@
 	produce_amount_min = 2
 	produce_amount_max = 3
 	maturation_nutrition = HUNGRINESS_DEMANDING
+	produce_time = SLOW_PRODUCE_TIME
 	plant_family = FAMILY_ROSACEAE
 	nitrogen_requirement = 0
 	phosphorus_requirement = 0
@@ -126,6 +132,7 @@
 
 /datum/plant_def/apple/set_genetic_tendencies(datum/plant_genetics/base_genetics)
 	base_genetics.cold_resistance = TRAIT_GRADE_GOOD
+	base_genetics.disease_resistance = TRAIT_GRADE_GOOD
 
 /datum/plant_def/pear
 	name = "pear tree"
@@ -136,6 +143,7 @@
 	produce_amount_min = 2
 	produce_amount_max = 3
 	maturation_nutrition = HUNGRINESS_DEMANDING
+	produce_time = SLOW_PRODUCE_TIME
 	plant_family = FAMILY_ROSACEAE
 	nitrogen_requirement = 0
 	phosphorus_requirement = 0
@@ -147,6 +155,7 @@
 
 /datum/plant_def/pear/set_genetic_tendencies(datum/plant_genetics/base_genetics)
 	base_genetics.water_efficiency = TRAIT_GRADE_GOOD
+	base_genetics.disease_resistance = TRAIT_GRADE_GOOD
 
 /datum/plant_def/plum
 	name = "plum tree"
@@ -157,6 +166,7 @@
 	produce_amount_min = 2
 	produce_amount_max = 3
 	maturation_nutrition = HUNGRINESS_DEMANDING
+	produce_time = SLOW_PRODUCE_TIME
 	plant_family = FAMILY_ROSACEAE
 	nitrogen_requirement = 45
 	phosphorus_requirement = 0
@@ -165,3 +175,6 @@
 	phosphorus_production = 32
 	potassium_production = 0
 	seed_identity = "plum seeds"
+
+/datum/plant_def/plum/set_genetic_tendencies(datum/plant_genetics/base_genetics)
+	base_genetics.disease_resistance = TRAIT_GRADE_GOOD

@@ -13,9 +13,9 @@
 	var/datum/plant_genetics/source_genetics
 
 /obj/item/reagent_containers/food/snacks/produce/proc/set_quality(quality)
-	crop_quality = clamp(quality, 0, 5)
+	crop_quality = clamp(quality, 0, 4)
 	update_appearance(UPDATE_OVERLAYS)
-	if(crop_quality >= 4) // gold tier and above
+	if(crop_quality >= 3) // gold tier and above
 		AddComponent(/datum/component/particle_spewer/sparkle)
 	else
 		var/datum/component/particle_spewer = GetComponent(/datum/component/particle_spewer/sparkle)
@@ -29,7 +29,7 @@
 		return
 	var/list/quality_icons = list(
 		null, // Regular has no overlay
-		"bronze",
+		// "bronze",
 		"silver",
 		"gold",
 		"diamond",

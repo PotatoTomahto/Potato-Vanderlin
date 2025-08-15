@@ -9,6 +9,7 @@
 	produce_amount_min = 2
 	produce_amount_max = 3
 	maturation_time = FAST_GROWING
+	produce_time = SLOW_PRODUCE_TIME
 	water_drain_rate = 1 / (2 MINUTES)
 	can_grow_underground = FALSE  // Tea needs sunlight
 	plant_family = FAMILY_THEACEAE

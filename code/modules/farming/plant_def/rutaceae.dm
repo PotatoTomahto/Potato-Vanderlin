@@ -7,6 +7,7 @@
 	produce_amount_min = 2
 	produce_amount_max = 3
 	maturation_nutrition = HUNGRINESS_DEMANDING
+	produce_time = SLOW_PRODUCE_TIME
 	plant_family = FAMILY_RUTACEAE  // Citrus family
 	nitrogen_requirement = 55
 	phosphorus_requirement = 0
@@ -18,6 +19,7 @@
 
 /datum/plant_def/tangerine/set_genetic_tendencies(datum/plant_genetics/base_genetics)
 	base_genetics.water_efficiency = TRAIT_GRADE_POOR  // Citrus needs lots of water
+	base_genetics.disease_resistance = TRAIT_GRADE_GOOD
 
 /datum/plant_def/lime
 	name = "lime tree"
@@ -28,6 +30,7 @@
 	produce_amount_min = 2
 	produce_amount_max = 3
 	maturation_nutrition = HUNGRINESS_DEMANDING
+	produce_time = SLOW_PRODUCE_TIME
 	plant_family = FAMILY_RUTACEAE
 	nitrogen_requirement = 0
 	phosphorus_requirement = 52
@@ -39,6 +42,7 @@
 
 /datum/plant_def/lime/set_genetic_tendencies(datum/plant_genetics/base_genetics)
 	base_genetics.cold_resistance = TRAIT_GRADE_POOR  // Tropical citrus
+	base_genetics.disease_resistance = TRAIT_GRADE_GOOD
 
 /datum/plant_def/lemon
 	name = "lemon tree"
@@ -49,6 +53,7 @@
 	produce_amount_min = 2
 	produce_amount_max = 3
 	maturation_nutrition = HUNGRINESS_DEMANDING
+	produce_time = SLOW_PRODUCE_TIME
 	plant_family = FAMILY_RUTACEAE
 	nitrogen_requirement = 0
 	phosphorus_requirement = 0
@@ -60,3 +65,4 @@
 
 /datum/plant_def/lemon/set_genetic_tendencies(datum/plant_genetics/base_genetics)
 	base_genetics.disease_resistance = TRAIT_GRADE_GOOD  // Citric acid repels some pests
+	base_genetics.disease_resistance = TRAIT_GRADE_GOOD
