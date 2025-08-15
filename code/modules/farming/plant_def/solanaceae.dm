@@ -2,8 +2,8 @@
 	name = "potato plant"
 	icon_state = "potato"
 	produce_type = /obj/item/reagent_containers/food/snacks/produce/vegetable/potato
-	produce_amount_min = 3
-	produce_amount_max = 5
+	produce_amount_min = 2
+	produce_amount_max = 4
 	maturation_nutrition = HUNGRINESS_TINY
 	water_drain_rate = 1 / (1 MINUTES)
 	plant_family = FAMILY_SOLANACEAE
