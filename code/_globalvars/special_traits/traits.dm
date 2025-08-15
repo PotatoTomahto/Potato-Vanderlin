@@ -111,7 +111,7 @@
 
 /datum/special_trait/witless_pixie
 	name = "Witless Pixie"
-	greet_text = span_notice("I was been born a dainty-minded, dim-witted klutz. Luckily I have my dazzling looks!")
+	greet_text = span_notice("I was born a dainty-minded, dim-witted klutz. Luckily I have my dazzling looks!")
 	weight = 100
 
 /datum/special_trait/witless_pixie/on_apply(mob/living/carbon/human/character, silent)
