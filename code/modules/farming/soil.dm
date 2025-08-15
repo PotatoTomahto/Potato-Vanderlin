@@ -310,10 +310,13 @@
 		return
 	if(try_handle_watering(attacking_item, user, params))
 		return
-	if(try_handle_fertilizing(attacking_item, user, params))
-		return
 	if(try_handle_harvest(attacking_item, user, params))
 		return
+	if(try_handle_fertilizing(attacking_item, user, params))
+		return
+	for(var/obj/item/bagged_item in attacking_item.contents)
+		if(try_handle_fertilizing(bagged_item, user, params))
+			return
 	return ..()
 
 /obj/structure/soil/proc/on_stepped(mob/living/stepper)
