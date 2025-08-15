@@ -393,10 +393,7 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 		reagents.remove_reagent(required_chem, selected_recipe.needed_reagents[required_chem])
 
 	soundloop.start()
-	if(!heated)
-		brew_timer = addtimer(CALLBACK(src, PROC_REF(end_brew)), selected_recipe.brew_time, TIMER_STOPPABLE)
-	else if(heated && !selected_recipe.heat_required)
-		brew_timer = addtimer(CALLBACK(src, PROC_REF(end_brew)), selected_recipe.brew_time * 0.5, TIMER_STOPPABLE)
+	brew_timer = addtimer(CALLBACK(src, PROC_REF(end_brew)), selected_recipe.brew_time, TIMER_STOPPABLE)
 	if(closed_icon_state)
 		icon_state = closed_icon_state
 	start_time = world.time

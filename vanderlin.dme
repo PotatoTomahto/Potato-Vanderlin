@@ -1409,7 +1409,6 @@
 #include "code\game\objects\items\melee\misc.dm"
 #include "code\game\objects\items\melee\transforming.dm"
 #include "code\game\objects\items\natural\animals.dm"
-#include "code\game\objects\items\natural\ash.dm"
 #include "code\game\objects\items\natural\bricks.dm"
 #include "code\game\objects\items\natural\clothfibersthorn.dm"
 #include "code\game\objects\items\natural\dirtclod.dm"
