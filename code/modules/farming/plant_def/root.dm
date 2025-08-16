@@ -4,7 +4,6 @@
 	produce_type = /obj/item/reagent_containers/food/snacks/produce/vegetable/turnip
 	produce_amount_min = 2
 	produce_amount_max = 4
-	maturation_nutrition = HUNGRINESS_TINY
 	maturation_time = FAST_GROWING
 	water_drain_rate = 1 / (1 MINUTES)
 	plant_family = FAMILY_ROOT
