@@ -479,10 +479,13 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 	qdel(item)
 
 /obj/structure/fermentation_keg/proc/create_items(user, I)
-	if(!ready_to_bottle)
+	if(!ready_to_bottle || recipe_completions < 1)
 		return
 
-	selected_recipe.create_items(user, I, src, max(recipe_completions, 1))
+	selected_recipe.create_items(user, I, src, recipe_completions)
+	var/datum/reagent/brewed_reagent = selected_recipe.reagent_to_brew
+	if(brewed_reagent)
+		reagents.remove_reagent(brewed_reagent, selected_recipe.per_brew_amount * selected_recipe.brewed_amount * recipe_completions)
 	reset_keg()
 
 // Only kegs that are ready to bottle can be tapped. Tapped barrels cannot brew and will need to be reset.

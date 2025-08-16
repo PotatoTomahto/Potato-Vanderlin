@@ -106,7 +106,8 @@
 		if(count < spawn_interval)
 			return
 	count = 0
-	spawn_particles()
+	if(isturf(source_object.loc))
+		spawn_particles()
 
 /datum/component/particle_spewer/proc/spawn_particles(atom/movable/mover, turf/target)
 	var/burstees = burst_amount

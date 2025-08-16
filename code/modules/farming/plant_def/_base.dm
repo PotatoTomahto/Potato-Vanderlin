@@ -18,8 +18,6 @@
 	var/produce_amount_min = 2
 	/// Amount of maximum produce to make on harvest
 	var/produce_amount_max = 3
-	/// How much nutrition will the plant require to mature fully
-	var/maturation_nutrition = HUNGRINESS_NORMAL
 	/// How much nutrition will the plant require to make produce
 	var/produce_nutrition = 20
 	/// If not perennial, the plant will uproot itself upon harvesting first produce

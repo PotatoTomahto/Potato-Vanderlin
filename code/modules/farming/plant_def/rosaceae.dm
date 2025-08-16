@@ -6,7 +6,6 @@
 	perennial = TRUE
 	produce_amount_min = 2
 	produce_amount_max = 3
-	maturation_nutrition = HUNGRINESS_DEMANDING
 	maturation_time = FAST_GROWING
 	produce_time = SLOW_PRODUCE_TIME
 	plant_family = FAMILY_ROSACEAE
@@ -26,7 +25,6 @@
 	perennial = TRUE
 	produce_amount_min = 2
 	produce_amount_max = 3
-	maturation_nutrition = HUNGRINESS_DEMANDING
 	maturation_time = FAST_GROWING
 	produce_time = SLOW_PRODUCE_TIME
 	plant_family = FAMILY_ROSACEAE
@@ -49,12 +47,11 @@
 	perennial = TRUE
 	produce_amount_min = 2
 	produce_amount_max = 3
-	maturation_nutrition = HUNGRINESS_DEMANDING
 	maturation_time = FAST_GROWING
 	produce_time = SLOW_PRODUCE_TIME
 	plant_family = FAMILY_ROSACEAE
 	nitrogen_requirement = 0
-	phosphorus_requirement = 40
+	phosphorus_requirement = 35
 	potassium_requirement = 0
 	nitrogen_production = 0
 	phosphorus_production = 0
@@ -72,7 +69,6 @@
 	perennial = TRUE
 	produce_amount_min = 2
 	produce_amount_max = 3
-	maturation_nutrition = HUNGRINESS_DEMANDING
 	maturation_time = FAST_GROWING
 	produce_time = SLOW_PRODUCE_TIME
 	plant_family = FAMILY_ROSACEAE
@@ -96,7 +92,6 @@
 	perennial = TRUE
 	produce_amount_min = 2
 	produce_amount_max = 3
-	maturation_nutrition = HUNGRINESS_DEMANDING
 	maturation_time = FAST_GROWING
 	produce_time = SLOW_PRODUCE_TIME
 	plant_family = FAMILY_ROSACEAE
@@ -119,12 +114,11 @@
 	perennial = TRUE
 	produce_amount_min = 2
 	produce_amount_max = 3
-	maturation_nutrition = HUNGRINESS_DEMANDING
 	produce_time = SLOW_PRODUCE_TIME
 	plant_family = FAMILY_ROSACEAE
 	nitrogen_requirement = 0
 	phosphorus_requirement = 0
-	potassium_requirement = 50
+	potassium_requirement = 40
 	nitrogen_production = 0
 	phosphorus_production = 30
 	potassium_production = 0
@@ -142,12 +136,11 @@
 	perennial = TRUE
 	produce_amount_min = 2
 	produce_amount_max = 3
-	maturation_nutrition = HUNGRINESS_DEMANDING
 	produce_time = SLOW_PRODUCE_TIME
 	plant_family = FAMILY_ROSACEAE
 	nitrogen_requirement = 0
 	phosphorus_requirement = 0
-	potassium_requirement = 48
+	potassium_requirement = 38
 	nitrogen_production = 32
 	phosphorus_production = 0
 	potassium_production = 0
@@ -165,10 +158,9 @@
 	perennial = TRUE
 	produce_amount_min = 2
 	produce_amount_max = 3
-	maturation_nutrition = HUNGRINESS_DEMANDING
 	produce_time = SLOW_PRODUCE_TIME
 	plant_family = FAMILY_ROSACEAE
-	nitrogen_requirement = 45
+	nitrogen_requirement = 35
 	phosphorus_requirement = 0
 	potassium_requirement = 0
 	nitrogen_production = 0

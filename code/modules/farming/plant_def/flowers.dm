@@ -4,7 +4,6 @@
 	produce_type = /obj/item/reagent_containers/food/snacks/produce/sunflower
 	produce_amount_min = 2
 	produce_amount_max = 3
-	maturation_nutrition = HUNGRINESS_TINY
 	maturation_time = VERY_FAST_GROWING
 	water_drain_rate = 1 / (2 MINUTES)
 	plant_family = FAMILY_ASTERACEAE
@@ -68,7 +67,6 @@
 	produce_type = /obj/item/reagent_containers/food/snacks/produce/poppy
 	produce_amount_min = 1
 	produce_amount_max = 2
-	maturation_nutrition = HUNGRINESS_DEMANDING
 	water_drain_rate = 1 / (2 MINUTES)
 	plant_family = FAMILY_ASTERACEAE
 	nitrogen_requirement = 0

@@ -24,7 +24,6 @@
 	produce_type = /obj/item/reagent_containers/food/snacks/produce/westleach
 	produce_amount_min = 2
 	produce_amount_max = 4
-	maturation_nutrition = 30
 	maturation_time = FAST_GROWING
 	produce_time = FAST_PRODUCE_TIME
 	plant_family = FAMILY_HERB

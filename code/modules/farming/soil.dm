@@ -876,14 +876,14 @@
 			if(plant.potassium_requirement > 0)
 				potassium_needed = (plant.potassium_requirement / total_growth_time) * target_growth_time
 		else
-			// Production phase
+			// Production phase, perennials use nutrients more "effectively" and need less
 			total_growth_time = plant.produce_time
 			if(plant.nitrogen_requirement > 0)
-				nitrogen_needed = (plant.nitrogen_requirement / total_growth_time) * target_growth_time
+				nitrogen_needed = ((plant.nitrogen_requirement * 0.6) / total_growth_time) * target_growth_time
 			if(plant.phosphorus_requirement > 0)
-				phosphorus_needed = (plant.phosphorus_requirement / total_growth_time) * target_growth_time
+				phosphorus_needed = ((plant.phosphorus_requirement * 0.6) / total_growth_time) * target_growth_time
 			if(plant.potassium_requirement > 0)
-				potassium_needed = (plant.potassium_requirement / total_growth_time) * target_growth_time
+				potassium_needed = ((plant.potassium_requirement * 0.6)/ total_growth_time) * target_growth_time
 	else
 		total_growth_time = plant.maturation_time + plant.produce_time
 		if(plant.nitrogen_requirement > 0)
@@ -974,9 +974,9 @@
 		for(var/obj/structure/soil/soil in cardinal_turf)
 			if(soil == src)
 				continue
-			soil.adjust_nitrogen(FLOOR(plant.nitrogen_production, 1))
-			soil.adjust_phosphorus(FLOOR(plant.phosphorus_production, 1))
-			soil.adjust_potassium(FLOOR(plant.potassium_production, 1))
+			soil.adjust_nitrogen(FLOOR(plant.nitrogen_production, 1) / 2)
+			soil.adjust_phosphorus(FLOOR(plant.phosphorus_production, 1) / 2)
+			soil.adjust_potassium(FLOOR(plant.potassium_production, 1) / 2)
 
 /obj/structure/soil/proc/add_growth(added_growth)
 	if(!plant)
