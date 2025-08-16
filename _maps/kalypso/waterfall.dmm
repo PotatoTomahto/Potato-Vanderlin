@@ -23,7 +23,7 @@
 /turf/open/water/cleanshallow,
 /area/template_noop)
 "B" = (
-/obj/item/alch/herb/rosa,
+/obj/item/alch/rosa,
 /turf/open/water/cleanshallow,
 /area/template_noop)
 "E" = (
