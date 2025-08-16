@@ -401,7 +401,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 		/datum/thaumaturgical_essence/earth = 5
 	)
 	init_types = list(
-		/obj/item/alch/herb/hypericum,
+		/obj/item/alch/hypericum,
 	)
 
 /datum/natural_precursor/leech
@@ -1511,7 +1511,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 		/datum/thaumaturgical_essence/life = 5
 	)
 	init_types = list(
-		/obj/item/alch/herb/atropa
+		/obj/item/alch/atropa
 	)
 
 /datum/natural_precursor/matricaria
@@ -1521,7 +1521,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 		/datum/thaumaturgical_essence/cycle = 5
 	)
 	init_types = list(
-		/obj/item/alch/herb/matricaria
+		/obj/item/alch/matricaria
 	)
 
 /datum/natural_precursor/symphitum
@@ -1531,7 +1531,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 		/datum/thaumaturgical_essence/earth = 5
 	)
 	init_types = list(
-		/obj/item/alch/herb/symphitum
+		/obj/item/alch/symphitum
 	)
 
 /datum/natural_precursor/taraxacum
@@ -1541,7 +1541,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 		/datum/thaumaturgical_essence/cycle = 5
 	)
 	init_types = list(
-		/obj/item/alch/herb/taraxacum
+		/obj/item/alch/taraxacum
 	)
 
 /datum/natural_precursor/euphrasia
@@ -1551,7 +1551,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 		/datum/thaumaturgical_essence/life = 5
 	)
 	init_types = list(
-		/obj/item/alch/herb/euphrasia
+		/obj/item/alch/euphrasia
 	)
 
 /datum/natural_precursor/paris
@@ -1561,7 +1561,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 		/datum/thaumaturgical_essence/life = 5
 	)
 	init_types = list(
-		/obj/item/alch/herb/paris
+		/obj/item/alch/paris
 	)
 
 /datum/natural_precursor/calendula
@@ -1571,7 +1571,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 		/datum/thaumaturgical_essence/light = 5
 	)
 	init_types = list(
-		/obj/item/alch/herb/calendula
+		/obj/item/alch/calendula
 	)
 
 /datum/natural_precursor/mentha
@@ -1581,7 +1581,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 		/datum/thaumaturgical_essence/air = 10
 	)
 	init_types = list(
-		/obj/item/alch/herb/mentha
+		/obj/item/alch/mentha
 	)
 
 /datum/natural_precursor/urtica
@@ -1591,7 +1591,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 		/datum/thaumaturgical_essence/life = 5
 	)
 	init_types = list(
-		/obj/item/alch/herb/urtica
+		/obj/item/alch/urtica
 	)
 
 /datum/natural_precursor/salvia
@@ -1601,7 +1601,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 		/datum/thaumaturgical_essence/magic = 5
 	)
 	init_types = list(
-		/obj/item/alch/herb/salvia
+		/obj/item/alch/salvia
 	)
 
 /datum/natural_precursor/rosa
@@ -1611,7 +1611,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 		/datum/thaumaturgical_essence/light = 5
 	)
 	init_types = list(
-		/obj/item/alch/herb/rosa
+		/obj/item/alch/rosa
 	)
 
 /datum/natural_precursor/hypericum
@@ -1621,7 +1621,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 		/datum/thaumaturgical_essence/order = 5
 	)
 	init_types = list(
-		/obj/item/alch/herb/hypericum
+		/obj/item/alch/hypericum
 	)
 
 /datum/natural_precursor/benedictus
@@ -1631,7 +1631,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 		/datum/thaumaturgical_essence/cycle = 5
 	)
 	init_types = list(
-		/obj/item/alch/herb/benedictus
+		/obj/item/alch/benedictus
 	)
 
 /datum/natural_precursor/valeriana
@@ -1641,7 +1641,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 		/datum/thaumaturgical_essence/motion = 5
 	)
 	init_types = list(
-		/obj/item/alch/herb/valeriana
+		/obj/item/alch/valeriana
 	)
 
 /datum/natural_precursor/artemisia
@@ -1651,7 +1651,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 		/datum/thaumaturgical_essence/poison = 5
 	)
 	init_types = list(
-		/obj/item/alch/herb/artemisia
+		/obj/item/alch/artemisia
 	)
 
 /datum/natural_precursor/euphorbia
@@ -1661,7 +1661,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 		/datum/thaumaturgical_essence/life = 5
 	)
 	init_types = list(
-		/obj/item/alch/herb/euphorbia
+		/obj/item/alch/euphorbia
 	)
 
 /datum/natural_precursor/rotten_food

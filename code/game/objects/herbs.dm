@@ -87,94 +87,94 @@
 	name = "atropa"
 	icon_state = "atropa2"
 
-	herbtype = /obj/item/alch/herb/atropa
+	herbtype = /obj/item/alch/atropa
 
 /obj/structure/flora/grass/herb/matricaria
 	name = "matricaria"
 	icon_state = "matricaria2"
 
-	herbtype = /obj/item/alch/herb/matricaria
+	herbtype = /obj/item/alch/matricaria
 
 /obj/structure/flora/grass/herb/symphitum
 	name = "symphitum"
 	icon_state = "symphitum2"
 
-	herbtype = /obj/item/alch/herb/symphitum
+	herbtype = /obj/item/alch/symphitum
 
 /obj/structure/flora/grass/herb/taraxacum
 	name = "taraxacum"
 	icon_state = "taraxacum2"
 
-	herbtype = /obj/item/alch/herb/taraxacum
+	herbtype = /obj/item/alch/taraxacum
 
 /obj/structure/flora/grass/herb/euphrasia
 	name = "euphrasia"
 	icon_state = "euphrasia2"
 
-	herbtype = /obj/item/alch/herb/euphrasia
+	herbtype = /obj/item/alch/euphrasia
 
 /obj/structure/flora/grass/herb/paris
 	name = "paris"
 	icon_state = "paris2"
 
-	herbtype = /obj/item/alch/herb/paris
+	herbtype = /obj/item/alch/paris
 
 /obj/structure/flora/grass/herb/calendula
 	name = "calendula"
 	icon_state = "calendula2"
 
-	herbtype = /obj/item/alch/herb/calendula
+	herbtype = /obj/item/alch/calendula
 
 /obj/structure/flora/grass/herb/mentha
 	name = "mentha"
 	icon_state = "mentha2"
 
-	herbtype = /obj/item/alch/herb/mentha
+	herbtype = /obj/item/alch/mentha
 
 /obj/structure/flora/grass/herb/urtica
 	name = "urtica"
 	icon_state = "urtica2"
 
-	herbtype = /obj/item/alch/herb/urtica
+	herbtype = /obj/item/alch/urtica
 
 /obj/structure/flora/grass/herb/salvia
 	name = "salvia"
 	icon_state = "salvia2"
 
-	herbtype = /obj/item/alch/herb/salvia
+	herbtype = /obj/item/alch/salvia
 
 /obj/structure/flora/grass/herb/hypericum
 	name = "hypericum"
 	icon_state = "hypericum2"
 
-	herbtype = /obj/item/alch/herb/hypericum
+	herbtype = /obj/item/alch/hypericum
 
 /obj/structure/flora/grass/herb/benedictus
 	name = "benedictus"
 	icon_state = "benedictus2"
 
-	herbtype = /obj/item/alch/herb/benedictus
+	herbtype = /obj/item/alch/benedictus
 
 /obj/structure/flora/grass/herb/valeriana
 	name = "valeriana"
 	icon_state = "valeriana2"
 
-	herbtype = /obj/item/alch/herb/valeriana
+	herbtype = /obj/item/alch/valeriana
 
 /obj/structure/flora/grass/herb/artemisia
 	name = "artemisia"
 	icon_state = "artemisia2"
 
-	herbtype = /obj/item/alch/herb/artemisia
+	herbtype = /obj/item/alch/artemisia
 
 /obj/structure/flora/grass/herb/rosa
 	name = "rosa"
 	icon_state = "rosa2"
 
-	herbtype = /obj/item/alch/herb/rosa
+	herbtype = /obj/item/alch/rosa
 
 /obj/structure/flora/grass/herb/euphorbia
 	name = "euphorbia"
 	icon_state = "euphorbia2"
 
-	herbtype = /obj/item/alch/herb/euphorbia
+	herbtype = /obj/item/alch/euphorbia

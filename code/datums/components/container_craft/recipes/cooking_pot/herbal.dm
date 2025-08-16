@@ -19,7 +19,7 @@
 	created_reagent = /datum/reagent/medicine/herbal/symphitum_tea
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/symphitum = 2
+		/obj/item/alch/symphitum = 2
 	)
 	finished_smell = /datum/pollutant/food/teas
 
@@ -29,7 +29,7 @@
 	created_reagent = /datum/reagent/medicine/herbal/taraxacum_extract
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/taraxacum = 3
+		/obj/item/alch/taraxacum = 3
 	)
 	crafting_time = 12 SECONDS
 	wording_choice = "roots of"
@@ -41,7 +41,7 @@
 	created_reagent = /datum/reagent/medicine/herbal/urtica_brew
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/urtica = 2
+		/obj/item/alch/urtica = 2
 	)
 	optional_requirements = list(
 		/obj/item/alch/irondust = 1 // Iron dust enhances blood restoration
@@ -71,7 +71,7 @@
 	created_reagent = /datum/reagent/medicine/herbal/calendula_salve
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/calendula = 3
+		/obj/item/alch/calendula = 3
 	)
 	finished_smell = /datum/pollutant/food/flower
 
@@ -81,7 +81,7 @@
 	created_reagent = /datum/reagent/medicine/herbal/hypericum_tonic
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/hypericum = 2
+		/obj/item/alch/hypericum = 2
 	)
 	optional_requirements = list(
 		/obj/item/alch/golddust = 1 // Gold dust enhances mana restoration
@@ -95,7 +95,7 @@
 	created_reagent = /datum/reagent/medicine/herbal/mentha_tea
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/mentha = 2
+		/obj/item/alch/mentha = 2
 	)
 	crafting_time = 6 SECONDS
 	finished_smell = /datum/pollutant/food/mint
@@ -106,7 +106,7 @@
 	created_reagent = /datum/reagent/buff/herbal/salvia_wisdom
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/salvia = 2
+		/obj/item/alch/salvia = 2
 	)
 	optional_requirements = list(
 		/obj/item/fertilizer/bone_meal = 1 // Bone meal enhances wisdom
@@ -119,7 +119,7 @@
 	created_reagent = /datum/reagent/buff/herbal/artemisia_luck
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/artemisia = 2
+		/obj/item/alch/artemisia = 2
 	)
 	optional_requirements = list(
 		/obj/item/alch/silverdust = 1 // Silver dust enhances luck
@@ -132,7 +132,7 @@
 	created_reagent = /datum/reagent/buff/herbal/euphorbia_strength
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/euphorbia = 2
+		/obj/item/alch/euphorbia = 2
 	)
 	optional_requirements = list(
 		/obj/item/alch/irondust = 1 // irondust enhances strength
@@ -146,7 +146,7 @@
 	created_reagent = /datum/reagent/poison/herbal/weak_atropa
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/atropa = 1
+		/obj/item/alch/atropa = 1
 	)
 	crafting_time = 5 SECONDS
 	finished_smell = /datum/pollutant/food/bitter
@@ -157,7 +157,7 @@
 	created_reagent = /datum/reagent/poison/herbal/matricaria_irritant
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/matricaria = 2
+		/obj/item/alch/matricaria = 2
 	)
 	finished_smell = /datum/pollutant/food/flower
 
@@ -166,7 +166,7 @@
 	created_reagent = /datum/reagent/medicine/herbal/simple_rosa
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/rosa = 1
+		/obj/item/alch/rosa = 1
 	)
 	crafting_time = 4 SECONDS
 	finished_smell = /datum/pollutant/food/flower
@@ -176,7 +176,7 @@
 	created_reagent = /datum/reagent/medicine/herbal/euphrasia_eye_wash
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/euphrasia = 2
+		/obj/item/alch/euphrasia = 2
 	)
 	finished_smell = /datum/pollutant/food/herb
 
@@ -186,8 +186,8 @@
 	created_reagent = /datum/reagent/medicine/herbal/valeriana_draught
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/valeriana = 2,
-		/obj/item/alch/herb/mentha = 1
+		/obj/item/alch/valeriana = 2,
+		/obj/item/alch/mentha = 1
 	)
 	crafting_time = 10 SECONDS
 	finished_smell = /datum/pollutant/food/herb
@@ -199,7 +199,7 @@
 	created_reagent = /datum/reagent/buff/herbal/benedictus_vigor
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/benedictus = 2
+		/obj/item/alch/benedictus = 2
 	)
 	optional_requirements = list(
 		/obj/item/alch/irondust = 1 // Iron enhances physical vigor
@@ -213,8 +213,8 @@
 	created_reagent = /datum/reagent/medicine/herbal/paris_poultice
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/paris = 2,
-		/obj/item/alch/herb/calendula = 1
+		/obj/item/alch/paris = 2,
+		/obj/item/alch/calendula = 1
 	)
 	crafting_time = 18 SECONDS
 	finished_smell = /datum/pollutant/food/bitter
@@ -228,12 +228,12 @@
 	created_reagent = /datum/reagent/medicine/herbal/herbalist_panacea
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/symphitum = 1,
-		/obj/item/alch/herb/calendula = 1,
-		/obj/item/alch/herb/urtica = 1
+		/obj/item/alch/symphitum = 1,
+		/obj/item/alch/calendula = 1,
+		/obj/item/alch/urtica = 1
 	)
 	optional_requirements = list(
-		/obj/item/alch/herb/rosa = 1 // Rosa enhances the blend
+		/obj/item/alch/rosa = 1 // Rosa enhances the blend
 	)
 	max_optionals = 1
 	crafting_time = 20 SECONDS
@@ -246,8 +246,8 @@
 	created_reagent = /datum/reagent/medicine/herbal/witches_bane
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/rosa = 2,
-		/obj/item/alch/herb/hypericum = 1
+		/obj/item/alch/rosa = 2,
+		/obj/item/alch/hypericum = 1
 	)
 	optional_requirements = list(
 		/obj/item/alch/silverdust = 1 // Silver purifies
@@ -262,9 +262,9 @@
 	created_reagent = /datum/reagent/buff/herbal/scholar_focus
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/mentha = 1,
-		/obj/item/alch/herb/euphrasia = 1,
-		/obj/item/alch/herb/salvia = 1
+		/obj/item/alch/mentha = 1,
+		/obj/item/alch/euphrasia = 1,
+		/obj/item/alch/salvia = 1
 	)
 	crafting_time = 12 SECONDS
 	finished_smell = /datum/pollutant/food/mint
@@ -277,8 +277,8 @@
 	created_reagent = /datum/reagent/buff/herbal/moonwater_elixir
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/artemisia = 1,
-		/obj/item/alch/herb/hypericum = 1
+		/obj/item/alch/artemisia = 1,
+		/obj/item/alch/hypericum = 1
 	)
 	optional_requirements = list(
 		/obj/item/alch/silverdust = 1,
@@ -296,9 +296,9 @@
 	created_reagent = /datum/reagent/buff/herbal/battle_stim
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/benedictus = 1,
-		/obj/item/alch/herb/valeriana = 1, // Calms nerves
-		/obj/item/alch/herb/urtica = 1    // Energizes
+		/obj/item/alch/benedictus = 1,
+		/obj/item/alch/valeriana = 1, // Calms nerves
+		/obj/item/alch/urtica = 1    // Energizes
 	)
 	optional_requirements = list(
 		/obj/item/alch/irondust = 1  // Strengthens resolve
@@ -315,8 +315,8 @@
 	created_reagent = /datum/reagent/buff/herbal/alchemist_insight
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/salvia = 1,
-		/obj/item/alch/herb/mentha = 1
+		/obj/item/alch/salvia = 1,
+		/obj/item/alch/mentha = 1
 	)
 	optional_requirements = list(
 		/obj/item/alch/golddust = 1 // Gold enhances perception
@@ -332,9 +332,9 @@
 	created_reagent = /datum/reagent/medicine/herbal/purification_draught
 	water_conversion = 1
 	requirements = list(
-		/obj/item/alch/herb/rosa = 1,
-		/obj/item/alch/herb/calendula = 1,
-		/obj/item/alch/herb/hypericum = 1
+		/obj/item/alch/rosa = 1,
+		/obj/item/alch/calendula = 1,
+		/obj/item/alch/hypericum = 1
 	)
 	optional_requirements = list(
 		/obj/item/alch/silverdust = 1,

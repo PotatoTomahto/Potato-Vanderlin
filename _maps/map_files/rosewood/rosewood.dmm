@@ -1888,7 +1888,7 @@
 	pixel_x = 4;
 	pixel_y = 13
 	},
-/obj/item/alch/herb/rosa{
+/obj/item/alch/rosa{
 	pixel_x = -7
 	},
 /turf/open/floor/carpet,
@@ -8326,7 +8326,7 @@
 	pixel_x = -7;
 	pixel_y = 7
 	},
-/obj/item/alch/herb/rosa{
+/obj/item/alch/rosa{
 	pixel_x = 9;
 	pixel_y = 7
 	},
@@ -9491,7 +9491,7 @@
 /area/rogue/indoors/town/smithy)
 "fkr" = (
 /obj/structure/hotspring/border/seven,
-/obj/item/alch/herb/rosa{
+/obj/item/alch/rosa{
 	pixel_x = -13;
 	pixel_y = -2
 	},
@@ -11644,11 +11644,11 @@
 /obj/structure/table/wood/counter{
 	dir = 8
 	},
-/obj/item/alch/herb/rosa{
+/obj/item/alch/rosa{
 	pixel_x = -2;
 	pixel_y = 9
 	},
-/obj/item/alch/herb/rosa{
+/obj/item/alch/rosa{
 	pixel_x = -2;
 	pixel_y = -7
 	},
@@ -12489,7 +12489,7 @@
 /turf/open/floor/herringbone,
 /area/rogue/indoors/town/manor)
 "gTj" = (
-/obj/item/alch/herb/rosa{
+/obj/item/alch/rosa{
 	pixel_x = 4;
 	pixel_y = 6
 	},
@@ -12726,7 +12726,7 @@
 	pixel_x = -7;
 	pixel_y = -1
 	},
-/obj/item/alch/herb/rosa{
+/obj/item/alch/rosa{
 	pixel_y = -7
 	},
 /turf/open/floor/ruinedwood/spiral,
@@ -13523,11 +13523,11 @@
 	pixel_x = -1;
 	pixel_y = 9
 	},
-/obj/item/alch/herb/rosa{
+/obj/item/alch/rosa{
 	pixel_x = -14;
 	pixel_y = -2
 	},
-/obj/item/alch/herb/rosa{
+/obj/item/alch/rosa{
 	pixel_x = 11;
 	pixel_y = 7
 	},
@@ -16873,7 +16873,7 @@
 /turf/open/floor/churchrough,
 /area/rogue/indoors/town/manor)
 "jxN" = (
-/obj/item/alch/herb/rosa{
+/obj/item/alch/rosa{
 	pixel_y = -10
 	},
 /turf/open/floor/cobblerock/alt,
@@ -22979,7 +22979,7 @@
 /area/rogue/indoors/town/manor)
 "mPO" = (
 /obj/structure/hotspring/border/two,
-/obj/item/alch/herb/rosa{
+/obj/item/alch/rosa{
 	pixel_x = 19;
 	pixel_y = 7
 	},
@@ -25550,7 +25550,7 @@
 /area/rogue/outdoors/town/roofs)
 "ohQ" = (
 /obj/effect/lily_petal/three,
-/obj/item/alch/herb/rosa{
+/obj/item/alch/rosa{
 	pixel_x = -8;
 	pixel_y = -2
 	},
@@ -35800,7 +35800,7 @@
 "tEV" = (
 /obj/item/reagent_containers/food/snacks/produce/manabloom,
 /obj/structure/hotspring/border/twelve,
-/obj/item/alch/herb/rosa{
+/obj/item/alch/rosa{
 	pixel_x = -13;
 	pixel_y = -1
 	},
@@ -38431,7 +38431,7 @@
 /turf/open/floor/ruinedwood/chevron,
 /area/rogue/under/town/basement)
 "vcz" = (
-/obj/item/alch/herb/rosa{
+/obj/item/alch/rosa{
 	pixel_y = -8
 	},
 /turf/open/floor/cobblerock/alt,
@@ -41046,15 +41046,15 @@
 /area/rogue/indoors/town/shop)
 "wxQ" = (
 /obj/structure/table/wood/fancy/blue,
-/obj/item/alch/herb/rosa{
+/obj/item/alch/rosa{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/alch/herb/rosa{
+/obj/item/alch/rosa{
 	pixel_x = -9;
 	pixel_y = -6
 	},
-/obj/item/alch/herb/rosa{
+/obj/item/alch/rosa{
 	pixel_x = -9;
 	pixel_y = 11
 	},
@@ -41495,7 +41495,7 @@
 /area/rogue/indoors/town/clinic_large)
 "wKi" = (
 /obj/structure/hotspring/border,
-/obj/item/alch/herb/rosa{
+/obj/item/alch/rosa{
 	pixel_x = -8;
 	pixel_y = -1
 	},
@@ -43368,7 +43368,7 @@
 /turf/open/floor/ruinedwood/spiralfade,
 /area/rogue/indoors/town)
 "xPv" = (
-/obj/item/alch/herb/rosa{
+/obj/item/alch/rosa{
 	pixel_x = -1;
 	pixel_y = 10
 	},
