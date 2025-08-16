@@ -1320,7 +1320,7 @@
 		var/modifier = 1
 		if(ishuman(src))
 			var/mob/living/carbon/human/H = src
-			if(is_child(H))
+			if(H.age == AGE_CHILD)
 				modifier = 5
 		if(HAS_TRAIT(src, TRAIT_HOLLOWBONES))
 			modifier = 4
