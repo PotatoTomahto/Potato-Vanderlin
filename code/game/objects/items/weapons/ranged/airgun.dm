@@ -51,7 +51,7 @@
 		var/newtime = chargetime
 		//skill block
 		newtime = newtime + 18
-		newtime = newtime - (master.get_skill_level(/datum/skill/craft/engineering) * 3)
+		newtime = newtime - (master.get_skill_level(/datum/skill/craft/engineering, TRUE) * 3)
 		//per block
 		newtime = newtime + 20
 		newtime = newtime - (master.STAPER)
@@ -71,7 +71,7 @@
 		var/newtime = chargetime
 		//skill block
 		newtime = newtime + 18
-		newtime = newtime - (master.get_skill_level(/datum/skill/craft/engineering) * 3)
+		newtime = newtime - (master.get_skill_level(/datum/skill/craft/engineering, TRUE) * 3)
 		//per block
 		newtime = newtime + 20
 		newtime = newtime - (master.STAPER)
@@ -152,7 +152,7 @@
 	if(!choice || choice == "cancel")
 		return
 	var/use_time = 4 //how much time the player needs to crank a knob, pull a lever, etc. in seconds
-	use_time = use_time - (user.get_skill_level(/datum/skill/craft/engineering) / 2)
+	use_time = use_time - (user.get_skill_level(/datum/skill/craft/engineering, TRUE) / 2)
 	switch(choice)
 		if("Increase Pressure")
 			if(pressure_to_use < maximum_pressure)
@@ -246,7 +246,7 @@
 		if(user.STAPER > 10)
 			BB.accuracy += (user.STAPER - 10) * 2 //each point of perception above 10 increases standard accuracy by 2.
 			BB.bonus_accuracy += (user.STAPER - 10) //Also, increases bonus accuracy by 1, which cannot fall off due to distance.
-		BB.bonus_accuracy += (user.get_skill_level(/datum/skill/craft/engineering) * 4) //+4 accuracy per level. Bonus accuracy will not drop-off.
+		BB.bonus_accuracy += (user.get_skill_level(/datum/skill/craft/engineering, TRUE) * 4) //+4 accuracy per level. Bonus accuracy will not drop-off.
 	SEND_SIGNAL(src, COMSIG_ATOM_STEAM_USE, pressure_to_use * 100, "airgun")
 	. = ..()
 	cranked = FALSE

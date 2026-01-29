@@ -485,7 +485,7 @@
 			switch(user.used_intent.blade_class)
 				if(BCLASS_CUT)
 					var/mob/living/lumberjacker = user
-					var/lumberskill = lumberjacker.get_skill_level(/datum/skill/labor/lumberjacking)
+					var/lumberskill = lumberjacker.get_skill_level(/datum/skill/labor/lumberjacking, TRUE)
 					if(!I.remove_bintegrity(1, user))
 						dullfactor = 0.2
 					else
@@ -543,7 +543,7 @@
 					cont = TRUE
 				if(BCLASS_PICK)
 					var/mob/living/miner = user
-					var/mineskill = miner.get_skill_level(/datum/skill/labor/mining)
+					var/mineskill = miner.get_skill_level(/datum/skill/labor/mining, TRUE)
 					dullfactor = 1.6 - (mineskill * 0.1)
 					cont = TRUE
 			if(!cont)
@@ -556,7 +556,7 @@
 				return 0
 			var/mob/living/miner = user
 			//Mining Skill force multiplier.
-			var/mineskill = miner.get_skill_level(/datum/skill/labor/mining)
+			var/mineskill = miner.get_skill_level(/datum/skill/labor/mining, TRUE)
 			newforce = newforce * (8+(mineskill*1.5))
 			// Pick quality multiplier. Affected by smithing, or material of the pick.
 			if(istype(I, /obj/item/weapon/pick))
