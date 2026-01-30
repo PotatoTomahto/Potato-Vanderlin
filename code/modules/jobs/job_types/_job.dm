@@ -451,9 +451,7 @@
 			return
 
 		var/datum/job_pack/picked_pack
-		if(!client)
-			picked_pack = pick(reals)
-		else
+		if(client)
 			picked_pack = browser_input_list(src, equipping.pack_title, equipping.pack_message, reals, timeout = 40 SECONDS)
 			if(QDELETED(src))
 				return
