@@ -182,12 +182,12 @@
 		return
 
 	var/choice = input(youngling, "Do you wish to become [current.name]'s apprentice?") as anything in list("Yes", "No")
-	if(choice != "Yes")
-		to_chat(current, span_warning("[youngling] has rejected your apprenticeship!"))
-		return
 	if(length(apprentices) >= max_apprentices)
 		return
 	if(current.stat >= UNCONSCIOUS || youngling.stat >= UNCONSCIOUS)
+		return
+	if(choice != "Yes")
+		to_chat(current, span_warning("[youngling] has rejected your apprenticeship!"))
 		return
 	apprentices |= WEAKREF(youngling)
 	youngling.ensure_skills().apprentice = TRUE
@@ -448,7 +448,7 @@
 		var/apprentice_amt = amt * (0.1 + multiplier)
 		if(apprentice.mind.add_sleep_experience(skill, apprentice_amt, FALSE, FALSE))
 			taught_apprentice = TRUE
-			SEND_SIGNAL(current, COMSIG_TAUGHT_APPRENTICE, apprentice)
+			SEND_SIGNAL(current, COMSIG_TAUGHT_APPRENTICE, apprentice, skill, apprentice_amt)
 
 	if(taught_apprentice)
 		current.add_stress(/datum/stress_event/apprentice_making_me_proud)

@@ -117,6 +117,9 @@
 	/// Supports (/datum/skill/bar = list(value, clamp)).
 	var/list/skills
 
+	/// Associative list of skill - base multiplier to set for skill_holder
+	var/list/skill_multipliers = list()
+
 	/// Innate spells that get removed when the job is removed
 	var/list/spells
 
@@ -292,6 +295,9 @@
 			spawned.clamped_adjust_skillrank(skill, amount_or_list[1], amount_or_list[2], TRUE)
 		else
 			spawned.adjust_skillrank(skill, amount_or_list, TRUE)
+
+	for(var/skill_type in skill_multipliers)
+		spawned.set_skill_exp_multiplier(skill_type, skill_multipliers[skill_type])
 
 	for(var/X in peopleknowme)
 		for(var/datum/mind/MF in get_minds(X))
