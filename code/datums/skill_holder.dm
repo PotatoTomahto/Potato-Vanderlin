@@ -162,9 +162,22 @@
 		skill_experience |= skill
 		skill_experience[skill] = 0
 
+/datum/skill_holder/Destroy(force, ...)
+	set_current(null)
+	. = ..()
+
 /datum/skill_holder/proc/set_current(mob/incoming)
+	if(current)
+		UnregisterSignal(current, COMSIG_MOB_MIND_TRANSFERRED_OUT_OF)
+		current.skills = null
 	current = incoming
-	incoming.skills = src
+	if(current)
+		current.skills = src
+		RegisterSignal(current, COMSIG_MOB_MIND_TRANSFERRED_OUT_OF, PROC_REF(upon_mind_transfer))
+
+/datum/skill_holder/proc/upon_mind_transfer(mob/living/source_old_mob, mob/living/new_mob)
+	SIGNAL_HANDLER
+	set_current(new_mob)
 
 /**
  * Offer apprenticeship to a youngling
@@ -252,7 +265,8 @@
 */
 /datum/skill_holder/proc/get_skill_level(skill, return_decimal)
 	if(!GetSkillRef(skill))
-		CRASH("get_skill_level was called without a skill argument!")
+		// CRASH("get_skill_level was called without a skill argument!")
+		return SKILL_LEVEL_NONE
 	if(!has_skill(skill))
 		return SKILL_LEVEL_NONE
 	return return_decimal ? known_skills[skill] : floor(known_skills[skill])
