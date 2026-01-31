@@ -347,6 +347,10 @@ GLOBAL_LIST_INIT(fish_compatible_fluid_types, list(
 		apply_traits() //Make sure traits are applied before size and weight.
 		update_size_and_weight()
 
+/obj/item/reagent_containers/food/snacks/fish/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	. = ..()
+
 /obj/item/reagent_containers/food/snacks/fish/proc/released(atom/location, mob/living/user)
 	playsound(location, 'sound/effects/splash.ogg', 50)
 	SEND_SIGNAL(location, COMSIG_FISH_RELEASED_INTO, src, user)
