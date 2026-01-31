@@ -237,16 +237,16 @@
 */
 /datum/skill_holder/proc/get_learning_boon(skill)
 	var/boon = 1 // Can't teach an old dog new tricks. Most old jobs start with higher skill too.
-	if(!istype(current))
+	boon += get_skill_level(skill) / 20
+	if(HAS_TRAIT(current, TRAIT_TUTELAGE)) //5% boost for being a good teacher
+		boon += 0.05
+	if(!ishuman(current))
 		return boon
 	var/mob/living/carbon/human/H = current
 	if(H.age == AGE_OLD)
 		boon -= 0.2
 	else if(H.age == AGE_CHILD)
 		boon += 0.2
-	boon += get_skill_level(skill) / 20
-	if(HAS_TRAIT(H, TRAIT_TUTELAGE)) //5% boost for being a good teacher
-		boon += 0.05
 	return boon
 
 /**
@@ -333,6 +333,9 @@
 
 	var/new_level_rounded = get_skill_level(skill)
 	if(had_skill_before && old_level_rounded == new_level_rounded)
+		return
+	// This occurs when adding a new skill to known_skills at SKILL_LEVEL_NONE
+	if(old_level_rounded == SKILL_LEVEL_NONE && new_level_rounded == SKILL_LEVEL_NONE)
 		return
 	SEND_SIGNAL(current, COMSIG_SKILL_RANK_CHANGE, skill_ref, new_level_rounded, old_level_rounded)
 	if(silent)
