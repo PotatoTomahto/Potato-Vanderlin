@@ -338,6 +338,9 @@
 	if(old_level_rounded == SKILL_LEVEL_NONE && new_level_rounded == SKILL_LEVEL_NONE)
 		return
 	SEND_SIGNAL(current, COMSIG_SKILL_RANK_CHANGE, skill_ref, new_level_rounded, old_level_rounded)
+	// Give spellpoints if the skill is arcane
+	if(skill == /datum/skill/magic/arcane && new_level_rounded > old_level_rounded)
+		current?.adjust_spell_points(new_level_rounded - old_level_rounded)
 	if(silent)
 		return
 	if(new_level_rounded >= old_level_rounded)
@@ -349,9 +352,6 @@
 			record_round_statistic(STATS_CRAFT_SKILLS)
 		if(skill == /datum/skill/misc/reading && old_level_rounded == SKILL_LEVEL_NONE && current.is_literate())
 			record_round_statistic(STATS_LITERACY_TAUGHT)
-		// Give spellpoints if the skill is arcane
-		if(skill == /datum/skill/magic/arcane)
-			current?.adjust_spell_points(new_level_rounded - old_level_rounded)
 	else
 		var/new_level_name = new_level_rounded ? SSskills.level_names[new_level_rounded] : span_info("None")
 		to_chat(current, span_warning("My [skill_ref.name] has weakened to [new_level_name]!"))
