@@ -354,14 +354,12 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 	selecting_recipe = TRUE
 
 	var/list/options = list()
-	for(var/datum/brewing_recipe/path as anything in subtypesof(/datum/brewing_recipe))
-		if(IS_ABSTRACT(path))
+	for(var/datum/brewing_recipe/path as anything in GLOB.brewing_recipes)
+		if(!heated && path.heat_required)
 			continue
-		var/datum/reagent/prereq = initial(path.pre_reqs)
-		if(!heated && initial(path.heat_required))
-			continue
+		var/datum/reagent/prereq = path.pre_reqs
 		if(!prereq || (reagents.has_reagent(prereq)))
-			options[initial(path.name)] = path
+			options[path.name] = path.type
 
 	for(var/datum/brewing_recipe/recipe as anything in GLOB.custom_fermentation_recipes)
 		var/datum/reagent/prereq = initial(recipe.pre_reqs)
@@ -370,7 +368,7 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 		if(!prereq || (reagents.has_reagent(prereq)))
 			options[initial(recipe.name)] = recipe
 
-	if(options.len == 0)
+	if(!length(options))
 		selecting_recipe = FALSE
 		return
 
@@ -514,13 +512,11 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 
 /obj/structure/fermentation_keg/proc/try_n_brew(mob/user)
 	if(!selected_recipe)
-		if(user)
-			to_chat(user, span_notice("I need to set a booze to brew!"))
+		to_chat(user, span_notice("I need to set a booze to brew!"))
 		return FALSE
 
 	if(brewing)
-		if(user)
-			to_chat(user, span_notice("This keg is already brewing a mix!"))
+		to_chat(user, span_notice("This keg is already brewing a mix!"))
 		return FALSE
 
 	var/ready = TRUE
@@ -537,9 +533,8 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 				available_amount = recipe_crop_stocks[needed_crop]
 
 		if(available_amount < needed_amount)
-			if(user)
-				var/difference = needed_amount - available_amount
-				to_chat(user, span_notice("This keg lacks [difference] [initial(needed_crop.name)][difference != 1 ? "s" : ""]!"))
+			var/difference = needed_amount - available_amount
+			to_chat(user, span_notice("This keg lacks [difference] [initial(needed_crop.name)][difference != 1 ? "s" : ""]!"))
 			ready = FALSE
 
 	for(var/obj/item/needed_item as anything in selected_recipe.needed_items)
@@ -554,15 +549,13 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 				available_amount = recipe_crop_stocks[needed_item]
 
 		if(available_amount < needed_amount)
-			if(user)
-				var/difference = needed_amount - available_amount
-				to_chat(user, span_notice("This keg lacks [difference] [initial(needed_item.name)][difference != 1 ? "s" : ""]!"))
+			var/difference = needed_amount - available_amount
+			to_chat(user, span_notice("This keg lacks [difference] [initial(needed_item.name)][difference != 1 ? "s" : ""]!"))
 			ready = FALSE
 
 	for(var/datum/reagent/required_chem as anything in selected_recipe.needed_reagents)
 		if(selected_recipe.needed_reagents[required_chem] > reagents.get_reagent_amount(required_chem))
-			if(user)
-				to_chat(user, span_notice("The keg lacks [initial(required_chem.name)]!"))
+			to_chat(user, span_notice("The keg lacks [initial(required_chem.name)]!"))
 			ready = FALSE
 
 	return ready
