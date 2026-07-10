@@ -3096,7 +3096,6 @@
 #include "code\modules\crafting\anvil_recipes\_anvil_recipe.dm"
 #include "code\modules\crafting\anvil_recipes\armor.dm"
 #include "code\modules\crafting\anvil_recipes\minigame.dm"
-#include "code\modules\crafting\anvil_recipes\repair_kit.dm"
 #include "code\modules\crafting\anvil_recipes\slag.dm"
 #include "code\modules\crafting\anvil_recipes\tools.dm"
 #include "code\modules\crafting\anvil_recipes\valuables.dm"

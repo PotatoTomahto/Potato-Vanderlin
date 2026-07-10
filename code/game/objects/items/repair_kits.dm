@@ -1,6 +1,5 @@
 #define METAL_REPAIR	(1<<0)
 #define CLOTH_REPAIR	(1<<1)
-#define ALL_REPAIR		(METAL_REPAIR|CLOTH_REPAIR)
 
 /obj/item/repair_kit
 	name = "repair kit"
@@ -96,8 +95,7 @@
 	if(!valid_check)
 		to_chat(user, span_warning("[src] can't be used to repair [attacked_item]!"))
 		return
-	var/item_loc = attacked_item.loc
-	if(!isturf(item_loc) && !istype(item_loc, /obj/machinery/anvil))
+	if(!isturf(attacked_item.loc))
 		to_chat(user, span_warning("I should put [attacked_item] down first."))
 		return
 
@@ -122,7 +120,6 @@
 	if(repairable_integrity && attacked_item.get_integrity() < attacked_item.max_integrity)
 		INVOKE_ASYNC(src, PROC_REF(attempt_repair), attacked_item, user, TRUE)
 
-
 /obj/item/repair_kit/cloth
 	name = "sewing kit"
 	icon_state = "sewingkit"
@@ -134,10 +131,13 @@
 /obj/item/repair_kit/cloth/half
 	repairable_integrity = 300
 
+/obj/item/repair_kit/cloth/empty
+	repairable_integrity = 0
+
 /obj/item/repair_kit/metal
-	name = "metal repair set"
+	name = "metal repair kit"
 	icon_state = "armorkit"
-	desc = "A collection of armor plates, polishing wax, and spare metal scraps. Everything you need to conduct field repairs on metal equipment."
+	desc = "A collection of armor plates, polishing wax, and spare metal scraps. Everything you need to perform field repairs on metal equipment."
 	repairable_integrity = 600
 	maximum_capacity = 600
 	repair_type = METAL_REPAIR
@@ -150,4 +150,3 @@
 
 #undef METAL_REPAIR
 #undef CLOTH_REPAIR
-#undef ALL_REPAIR

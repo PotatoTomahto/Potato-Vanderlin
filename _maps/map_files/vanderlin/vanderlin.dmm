@@ -835,7 +835,7 @@
 /turf/open/floor/dirt/road,
 /area/outdoors/town/keep)
 "aud" = (
-/obj/structure/closet/crate/crafted_closet/crafted,
+/obj/structure/closet/crate/crafted_closet,
 /obj/item/weapon/mace/woodclub,
 /obj/item/weapon/knife/dagger,
 /obj/machinery/light/fueled/wallfire/candle{
@@ -2164,7 +2164,7 @@
 /obj/machinery/light/fueled/wallfire/candle{
 	pixel_y = -32
 	},
-/obj/structure/closet/crate/crafted_closet/crafted,
+/obj/structure/closet/crate/crafted_closet,
 /obj/item/clothing/cloak/matron,
 /obj/item/clothing/pants/trou/beltpants,
 /obj/item/clothing/shirt/undershirt/colored/black,
@@ -9805,7 +9805,7 @@
 /turf/open/floor/grass,
 /area/outdoors/town/noble_manor/blue)
 "epI" = (
-/obj/structure/closet/crate/crafted_closet/crafted,
+/obj/structure/closet/crate/crafted_closet,
 /obj/item/clothing/shoes/nobleboot,
 /obj/item/clothing/head/courtierhat,
 /obj/item/clothing/shirt/tunic/noblecoat,
@@ -22358,7 +22358,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/indoors/town/smithy)
 "jNe" = (
-/obj/structure/closet/crate/crafted_closet/crafted,
+/obj/structure/closet/crate/crafted_closet,
 /obj/item/clothing/shoes/nobleboot,
 /obj/item/clothing/head/courtierhat,
 /obj/item/clothing/head/chaperon/colored,
@@ -27165,7 +27165,7 @@
 	pixel_x = 2;
 	pixel_y = 3
 	},
-/obj/structure/closet/crate/crafted_closet/crafted,
+/obj/structure/closet/crate/crafted_closet,
 /obj/item/reagent_containers/glass/cup/wooden{
 	pixel_x = 1;
 	pixel_y = -6
@@ -27994,7 +27994,7 @@
 /turf/open/floor/churchmarble,
 /area/indoors/town/church/chapel)
 "mlc" = (
-/obj/structure/closet/crate/crafted_closet/crafted,
+/obj/structure/closet/crate/crafted_closet,
 /obj/item/clothing/armor/gambeson,
 /obj/item/clothing/armor/gambeson,
 /obj/item/clothing/armor/gambeson,
@@ -32824,7 +32824,7 @@
 	pixel_x = -32;
 	pixel_y = 0
 	},
-/obj/structure/closet/crate/crafted_closet/crafted,
+/obj/structure/closet/crate/crafted_closet,
 /obj/item/clothing/cloak/tabard/knight/guard{
 	pixel_x = -6;
 	pixel_y = 2
@@ -33722,6 +33722,7 @@
 /obj/machinery/light/fueled/wallfire/candle{
 	pixel_y = -32
 	},
+/obj/item/repair_kit/cloth/empty,
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/town/shop)
 "oHw" = (
@@ -44674,6 +44675,10 @@
 	},
 /turf/open/water/ocean/abyss,
 /area/outdoors/town)
+"toc" = (
+/obj/item/repair_kit/metal/empty,
+/turf/open/floor/blocks,
+/area/indoors/town/smithy)
 "tom" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/nosmooth,
@@ -46430,7 +46435,7 @@
 /turf/open/floor/ruinedwood/spiral,
 /area/indoors/town/shop)
 "ucP" = (
-/obj/structure/closet/crate/crafted_closet/crafted,
+/obj/structure/closet/crate/crafted_closet,
 /obj/item/clothing/shoes/boots/leather,
 /obj/item/clothing/shoes/boots/leather,
 /obj/item/clothing/shoes/boots/leather,
@@ -53317,7 +53322,7 @@
 /turf/open/floor/wood,
 /area/outdoors/beach/boat)
 "wLV" = (
-/obj/structure/closet/crate/crafted_closet/crafted,
+/obj/structure/closet/crate/crafted_closet,
 /obj/item/broom,
 /obj/item/natural/cloth,
 /obj/item/natural/cloth,
@@ -57010,7 +57015,7 @@
 /turf/open/floor/hexstone,
 /area/indoors/town/clocktower)
 "ylD" = (
-/obj/structure/closet/crate/crafted_closet/crafted,
+/obj/structure/closet/crate/crafted_closet,
 /obj/item/clothing/shoes/boots/darkboots,
 /obj/item/clothing/shoes/boots/darkboots,
 /obj/machinery/light/fueled/wallfire/candle{
@@ -118370,7 +118375,7 @@ sCJ
 ouY
 kmk
 hCp
-hCp
+toc
 hCp
 hCp
 hCp
