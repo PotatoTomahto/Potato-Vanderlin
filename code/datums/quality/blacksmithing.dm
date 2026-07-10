@@ -24,12 +24,6 @@
 	difficulty_modifier = diff_mod
 	minigame_plays = mini_play
 
-// REMINDERS:
-// skill ranges from 0 to 6
-// performance ranges from 0 to 100 (100 is perfect)
-// material ranges from 1 to 6 (3 is regular)
-// smithing scales from -10 to 10 (0 is regular)
-// Tier differences are between 2 and 3 (for positive ones)
 /datum/quality_calculator/blacksmithing/calculate_final_quality()
 	var/avg_skill = skill_quality / minigame_plays
 	avg_skill = min(avg_skill + skill_randomization, SKILL_LEVEL_LEGENDARY) // just a healthy amount of randomization
@@ -42,14 +36,14 @@
 	* Performance (MINOR): Good performance can push items up a tier
 	* Difficulty (MINOR) : Makes harder recipes have lower qualities in general
 	*/
-	var/skill_component = (avg_skill / 6) * (-BLACKSMITH_QUALITY_SPOILED + BLACKSMITH_QUALITY_FLAWLESS)
+	var/skill_component = (avg_skill / 6) * 12
 	var/material_component = ((avg_material - SMELTERY_QUALITY_NORMAL) / SMELTERY_QUALITY_NORMAL) * 5
 	var/performance_component
 	if(avg_performance > MINIMUM_ANVIL_MINIGAME_SCORE)
 		performance_component = (avg_performance / 100) * 3
 	else
 		performance_component = (avg_performance - MINIMUM_ANVIL_MINIGAME_SCORE) * 3
-	var/difficulty_penalty = difficulty_modifier * 0.6
+	var/difficulty_penalty = difficulty_modifier * 0.5
 
 	var/final_quality = skill_component + material_component + performance_component - difficulty_penalty
 	final_quality -= 7

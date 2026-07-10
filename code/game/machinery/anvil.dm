@@ -229,7 +229,7 @@
 	if(!working_material || !HAS_TRAIT(working_material, TRAIT_NEEDS_QUENCH) || working_material.currecipe)
 		return
 
-	var/list/valid_types = list()
+	var/list/valid_recipes = list()
 	for(var/datum/anvil_recipe/recipe_instance as anything in GLOB.anvil_recipes)
 		var/datum/recipe_type = recipe_instance.type // necessary typecasting of type for macro
 		if(IS_ABSTRACT(recipe_type))
@@ -240,31 +240,28 @@
 			continue
 
 		var/recipe_category = recipe_instance.category
-		if(!valid_types[recipe_category])
-			valid_types[recipe_category] = list()
-		valid_types[recipe_category] += recipe_instance
+		if(!valid_recipes[recipe_category])
+			valid_recipes[recipe_category] = list()
+		valid_recipes[recipe_category] += recipe_instance
 
-	if(!length(valid_types))
+	if(!length(valid_recipes))
 		return
 
 	var/category_choice
-	if(length(valid_types) == 1)
-		category_choice = valid_types[1]
+	if(length(valid_recipes) == 1)
+		category_choice = valid_recipes[1]
 	else
-		category_choice = browser_input_list(user, "Choose a category", "Anvil", valid_types)
+		category_choice = browser_input_list(user, "Choose a category", "Anvil", valid_recipes)
 	if(!category_choice)
 		return
 
-	var/list/chosen_category = valid_types[category_choice]
+	var/list/chosen_category = valid_recipes[category_choice]
 	if(!length(chosen_category))
 		return
 
 	var/list/final_recipe_list = list()
 	for(var/datum/anvil_recipe/recipe_instance as anything in chosen_category)
-		var/modified_name = "[recipe_instance.name]"
-		if(recipe_instance.output_amount > 1)
-			modified_name += " ([recipe_instance.output_amount]x)"
-		final_recipe_list["[modified_name] \[[uppertext(SSskills.level_names_plain[recipe_instance.craftdiff])]\]"] = recipe_instance
+		final_recipe_list[GLOB.anvil_recipe_description[recipe_instance.type]] = recipe_instance
 
 	var/datum/chosen_recipe = browser_input_list(user, "Choose what to start working on:", "Anvil", sortList(final_recipe_list))
 

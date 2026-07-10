@@ -49,7 +49,7 @@
 		LEGENDARY: 		between 100 and 150
 	PICKED NUMBER GETS DIVIDED BY SMELTING_DENOMINATOR.
 	*/
-	var/skill_factor = rand(skill_quality*15 + 10, max(30, skill_quality*25))
+	var/skill_factor = rand(skill_quality * 15 + 10, max(30, skill_quality * 25))
 	var/material_factor = (material_quality - SMELTERY_QUALITY_SPOIL) * 10
 
 	var/final_quality = (skill_factor + material_factor) / SMELTING_DENOMINATOR
