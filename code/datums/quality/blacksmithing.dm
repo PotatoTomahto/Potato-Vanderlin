@@ -23,7 +23,6 @@
 	performance_quality = perf_qual
 	difficulty_modifier = diff_mod
 	minigame_plays = mini_play
-	skill_randomization = rand(0, 0.5) // just a healthy amount of randomization
 
 // REMINDERS:
 // skill ranges from 0 to 6
@@ -44,13 +43,13 @@
 	* Difficulty (MINOR) : Makes harder recipes have lower qualities in general
 	*/
 	var/skill_component = (avg_skill / 6) * (-BLACKSMITH_QUALITY_SPOILED + BLACKSMITH_QUALITY_FLAWLESS)
-	var/material_component = ((avg_material - SMELTERY_QUALITY_NORMAL) / SMELTERY_QUALITY_NORMAL) * 6
+	var/material_component = ((avg_material - SMELTERY_QUALITY_NORMAL) / SMELTERY_QUALITY_NORMAL) * 5
 	var/performance_component
 	if(avg_performance > MINIMUM_ANVIL_MINIGAME_SCORE)
 		performance_component = (avg_performance / 100) * 3
 	else
 		performance_component = (avg_performance - MINIMUM_ANVIL_MINIGAME_SCORE) * 3
-	var/difficulty_penalty = difficulty_modifier * 0.3
+	var/difficulty_penalty = difficulty_modifier * 0.6
 
 	var/final_quality = skill_component + material_component + performance_component - difficulty_penalty
 	final_quality -= 7

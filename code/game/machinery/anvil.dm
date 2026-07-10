@@ -102,7 +102,7 @@
 		return FALSE
 
 	var/skill_value = GET_MOB_SKILL_VALUE(user, working_material.anvilrepair)
-	if(skill_value <= 0)
+	if(skill_value < 10)
 		to_chat(user, span_warning("You don't know enough about this craft to restore [working_material]."))
 		return FALSE
 
@@ -120,10 +120,10 @@
 		return FALSE
 
 	if(!HAS_TRAIT(working_material, TRAIT_NEEDS_QUENCH))
-		to_chat(item, span_warning("[working_material] needs to be heated first to be mended!"))
+		to_chat(user, span_warning("[working_material] needs to be heated first to be mended!"))
 		return FALSE
 	if(!HAS_TRAIT(item, TRAIT_NEEDS_QUENCH))
-		to_chat(item, span_warning("[item] needs to be heated first to be used as mending material!"))
+		to_chat(user, span_warning("[item] needs to be heated first to be used as mending material!"))
 		return FALSE
 
 	var/restores_done = working_material.integrity_restores

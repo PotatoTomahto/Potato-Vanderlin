@@ -33,6 +33,9 @@
 	list("", "", "")\
 )
 
+/// The baseline unit for cargo crates. Adjusting this will change the cost of all in-game shuttles, crate export values, bounty rewards, and all supply pack import values, as they use this as their unit of measurement.
+#define CARGO_CRATE_VALUE 5
+
 #define SUPPLY_PRICE_FLOOR_MULT 0.5 // never cheaper than half of baseline
 #define SUPPLY_PRICE_CEILING_MULT 3.0 // never pricier than 3x baseline
 

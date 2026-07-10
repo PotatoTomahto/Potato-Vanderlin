@@ -65,7 +65,7 @@
 	return ITEM_INTERACT_BLOCKING
 
 /obj/item/mould/proc/try_filling(mob/living/user, obj/item/storage/crucible)
-	var/datum/reagent/molten_metal/metal = crucible.reagents.get_reagent(/datum/reagent/molten_metal)
+	var/datum/reagent/molten_metal/metal = crucible.reagents.has_reagent(/datum/reagent/molten_metal)
 	if(!metal || cooling)
 		return FALSE
 
@@ -295,7 +295,7 @@
 	if(moulded_recipe)
 		return
 
-	moulded_recipe = new found_recipe()
+	moulded_recipe = new found_recipe.type()
 	if(ispath(item_type, /obj/item/weapon/pick))
 		base_icon_state = "pick"
 	else if(ispath(item_type, /obj/item/weapon/polearm))
@@ -361,7 +361,7 @@
 /obj/item/mould/customizable/try_filling(obj/item/storage/crucible/crucible, mob/living/user)
 	if(cooling)
 		return
-	var/datum/reagent/molten_metal/metal = crucible.reagents.get_reagent(/datum/reagent/molten_metal)
+	var/datum/reagent/molten_metal/metal = crucible.reagents.has_reagent(/datum/reagent/molten_metal)
 	if(!metal)
 		return
 
@@ -427,5 +427,6 @@
 	moulded_recipe.accumulated_quality = MINIMUM_ANVIL_MINIGAME_SCORE
 	moulded_recipe.material_quality = SMELTERY_QUALITY_NORMAL
 	moulded_recipe.skill_quality = 3.5
-	moulded_recipe.handle_creation(get_turf(src))
+	moulded_recipe.craftdiff = 0
+	moulded_recipe.handle_creation(get_turf(src)) // Always create regular quality outputs
 	return ..()

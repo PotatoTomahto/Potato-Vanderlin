@@ -319,6 +319,13 @@
 	created_item = /obj/item/weapon/chisel
 	craftdiff = 1
 
+/datum/anvil_recipe/tools/steel/metalrepairkit
+	name = "Metal Repair Kit"
+	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/iron)
+	created_item = /obj/item/repair_kit/metal/half
+	output_amount = 2
+	craftdiff = SKILL_RANK_EXPERT
+
 // --------- SILVER -----------
 
 /datum/anvil_recipe/tools/silver
