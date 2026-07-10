@@ -102,7 +102,7 @@
 		return FALSE
 
 	var/skill_value = GET_MOB_SKILL_VALUE(user, working_material.anvilrepair)
-	if(skill_value < 10)
+	if(skill_value < SKILL_RANK_NOVICE)
 		to_chat(user, span_warning("You don't know enough about this craft to restore [working_material]."))
 		return FALSE
 

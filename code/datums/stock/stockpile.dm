@@ -352,6 +352,17 @@
 	importexport_amt = 20
 	stockpile_id = STOCK_FOOD
 
+/datum/stock/stockpile/turnip
+	name = "Turnips"
+	desc = "A hearty root vegetable fit for soup."
+	item_type = /obj/item/reagent_containers/food/snacks/produce/vegetable/turnip
+	held_items = 2
+	payout_price = 2
+	withdraw_price = 5
+	export_price = 4
+	importexport_amt = 20
+	stockpile_id = STOCK_FOOD
+
 /datum/stock/stockpile/potato
 	name = "Potatoes"
 	desc = "A reliable if tough vegetable of Dwarven popularity."
