@@ -12,22 +12,22 @@
 ///////////////////////////////////////////////
 
 /datum/anvil_recipe/tools/tin/platter
-	name = "Platters"
+	name = "Platters (tin)"
 	created_item = /obj/item/plate/pewter
 	output_amount = 2
 
 /datum/anvil_recipe/tools/tin/spoon
-	name = "Spoons"
+	name = "Spoons (tin)"
 	created_item = /obj/item/kitchen/spoon/pewter
 	output_amount = 2
 
 /datum/anvil_recipe/tools/tin/fork
-	name = "Forks"
+	name = "Forks (tin)"
 	created_item = /obj/item/kitchen/fork/pewter
 	output_amount = 2
 
 /datum/anvil_recipe/tools/tin/bowl
-	name = "Bowl"
+	name = "Bowl (tin)"
 	created_item = /obj/item/reagent_containers/glass/bowl/pewter
 	output_amount = 2
 
@@ -73,11 +73,11 @@
 	created_item = /obj/item/weapon/hammer/copper
 
 /datum/anvil_recipe/tools/copper/pote
-	name = "Cooking pot"
+	name = "Cooking pot (copper)"
 	created_item = /obj/item/reagent_containers/glass/bucket/pot/copper
 
 /datum/anvil_recipe/tools/copper/platter
-	name = "Platters"
+	name = "Platters (copper)"
 	created_item = /obj/item/plate/copper
 	output_amount = 2
 
@@ -218,7 +218,7 @@
 	craftdiff = 0
 
 /datum/anvil_recipe/tools/iron/pote
-	name = "Cooking pot"
+	name = "Cooking pot (iron)"
 	created_item = /obj/item/reagent_containers/glass/bucket/pot
 	craftdiff = 1
 
@@ -233,17 +233,17 @@
 	created_item = /obj/item/weapon/chisel/iron
 
 /datum/anvil_recipe/tools/iron/spoon
-	name = "Spoons"
+	name = "Spoons (iron)"
 	created_item = /obj/item/kitchen/spoon/iron
 	output_amount = 2
 
 /datum/anvil_recipe/tools/iron/fork
-	name = "Forks"
+	name = "Forks (iron)"
 	created_item = /obj/item/kitchen/fork/iron
 	output_amount = 2
 
 /datum/anvil_recipe/tools/iron/cups
-	name = "Metal Cups"
+	name = "Metal Cups (iron)"
 	created_item = /obj/item/reagent_containers/glass/cup
 	output_amount = 3
 	craftdiff = 0
@@ -280,7 +280,7 @@
 	category = "Headstones"
 
 /datum/anvil_recipe/tools/iron/bowl
-	name = "Bowl"
+	name = "Bowl (iron)"
 	created_item = /obj/item/reagent_containers/glass/bowl/iron
 	output_amount = 2
 
@@ -345,7 +345,7 @@
 	created_item = /obj/item/reagent_containers/glass/carafe/silver
 
 /datum/anvil_recipe/tools/silver/platter
-	name = "Platters"
+	name = "Platters (silver)"
 	created_item = /obj/item/plate/silver
 	craftdiff = 2
 
@@ -375,7 +375,7 @@
 	created_item = /obj/item/reagent_containers/glass/carafe/gold
 
 /datum/anvil_recipe/tools/gold/platter
-	name = "Platters"
+	name = "Platters (gold)"
 	created_item = /obj/item/plate/gold
 	craftdiff = 2
 
@@ -402,12 +402,12 @@
 	created_item = /obj/item/storage/crucible
 
 /datum/anvil_recipe/tools/casting/ingot_mould
-	name = "Ingot mould"
+	name = "Ingot mould (steel)"
 	required_material = /obj/item/ingot/steel
 	created_item = /obj/item/mould/ingot
 
 /datum/anvil_recipe/tools/casting/ingot_mould/iron
-	name = "Ingot mould"
+	name = "Ingot mould (iron)"
 	required_material = /obj/item/ingot/iron
 
 /datum/anvil_recipe/tools/casting/generic_mould
