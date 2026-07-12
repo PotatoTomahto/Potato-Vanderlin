@@ -275,7 +275,7 @@
 
 /datum/anvil_recipe/tools/iron/headstone_malum
 	name = "Malumite Headstone (+Stone Blocks x2)"
-	additional_items = list(/obj/item/natural/stoneblock, /obj/item/natural/stoneblock)
+	additional_items = list(/obj/item/natural/stoneblock = 2)
 	created_item = /obj/item/gravedecor/headstone/malum
 	category = "Headstones"
 
