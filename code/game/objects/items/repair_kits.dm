@@ -14,6 +14,7 @@
 	var/maximum_capacity = 0
 	var/refill_amount = 100
 	var/repair_type
+	var/half_icon_state = ""
 
 /obj/item/repair_kit/Initialize(mapload)
 	. = ..()
@@ -29,6 +30,8 @@
 	. = ..()
 	if(!repairable_integrity)
 		icon_state = "armorkit_empty"
+	else if(half_icon_state && repairable_integrity < maximum_capacity / 2)
+		icon_state = half_icon_state
 	else
 		icon_state = initial(icon_state)
 
@@ -127,6 +130,7 @@
 	repairable_integrity = 600
 	maximum_capacity = 600
 	repair_type = CLOTH_REPAIR
+	half_icon_state = "custarsewingkit"
 
 /obj/item/repair_kit/cloth/half
 	repairable_integrity = 300
@@ -141,6 +145,7 @@
 	repairable_integrity = 600
 	maximum_capacity = 600
 	repair_type = METAL_REPAIR
+	half_icon_state = "custararmorkit"
 
 /obj/item/repair_kit/metal/half
 	repairable_integrity = 300
