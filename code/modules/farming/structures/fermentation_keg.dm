@@ -643,10 +643,10 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 		var/name_to_use = origin_keg.selected_recipe.get_display_name()
 		var/datum/reagent/original_brewed_reagent = source_reagents.has_reagent(brewed_reagent)
 		if(!original_brewed_reagent)
-			to_chat(user, span_info("[origin_keg] is fully emptied of [lowertext(name_to_use)]."))
+			to_chat(user, span_info("[origin_keg] is fully emptied of [LOWER_TEXT(name_to_use)]."))
 			return
 
-		user.visible_message("[user] starts to extract [lowertext(name_to_use)] into [src]." , "I start to extract [lowertext(name_to_use)] into [src].")
+		user.visible_message("[user] starts to extract [LOWER_TEXT(name_to_use)] into [src]." , "I start to extract [LOWER_TEXT(name_to_use)] into [src].")
 		if(!do_after(user, 5 SECONDS, origin_keg))
 			return
 
@@ -659,7 +659,7 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 		reagents.add_reagent(new_brewed_reagent, conversion_amount, data = quality_data)
 
 		if(!source_reagents.has_reagent(brewed_reagent))
-			to_chat(user, span_info("[src] is fully emptied of [lowertext(name_to_use)]."))
+			to_chat(user, span_info("[src] is fully emptied of [LOWER_TEXT(name_to_use)]."))
 	else
 		user.visible_message("[user] starts to pour [origin_keg] into [src].", "I start to pour [origin_keg] into [src].")
 		if(!do_after(user, 5 SECONDS, origin_keg, extra_checks = CALLBACK(src, TYPE_PROC_REF(/atom/movable, Adjacent), origin_keg)))

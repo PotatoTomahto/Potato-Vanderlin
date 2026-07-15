@@ -1,6 +1,6 @@
 /datum/anvil_recipe
 	abstract_type = /datum/anvil_recipe
-	var/name = ""
+	var/name
 	/// Category of crafted item. Will determine how it shows up in menus.
 	var/category = "Misc"
 	/// Quality of the bar(s) used. Accumulated per added ingot.
