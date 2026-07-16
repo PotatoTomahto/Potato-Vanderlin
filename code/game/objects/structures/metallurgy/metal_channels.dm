@@ -51,10 +51,10 @@
 		icon_state = "channel"
 
 	var/datum/reagent/molten_metal/metal = group_reagents?.has_reagent(/datum/reagent/molten_metal)
-	var/datum/material/largest = metal?.largest_metal
 	if(!metal)
 		return
 
+	var/datum/material/largest = metal.largest_metal
 	. += mutable_appearance(
 		icon,
 		"[icon_state]-c",
