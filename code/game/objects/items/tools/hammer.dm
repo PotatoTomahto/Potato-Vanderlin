@@ -54,7 +54,7 @@
 			to_chat(user, span_warning("There is nothing to further repair on [attacked_prosthetic]."))
 			return ITEM_INTERACT_BLOCKING
 
-		if(GET_MOB_SKILL_VALUE_OLD(user, attacked_prosthetic.anvilrepair) <= 0)
+		if(GET_MOB_SKILL_VALUE_OLD(user, attacked_prosthetic.anvilrepair) <= SKILL_LEVEL_NOVICE)
 			if(prob(30))
 				repair_percent = 0.01
 			else

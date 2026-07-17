@@ -36,7 +36,7 @@
 	* Performance (MINOR): Good performance can push items up a tier
 	* Difficulty (MINOR) : Makes harder recipes have lower qualities in general
 	*/
-	var/skill_component = (avg_skill / 7) * 13
+	var/skill_component = (avg_skill / 6.5) * 13
 	var/material_component = ((avg_material - SMELTERY_QUALITY_NORMAL) / SMELTERY_QUALITY_NORMAL) * 5
 	var/performance_component
 	if(avg_performance > MINIMUM_ANVIL_MINIGAME_SCORE)
