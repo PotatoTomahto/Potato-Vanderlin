@@ -15,6 +15,10 @@
 	hydration_factor = 10
 	boiling_point = T0C + 78 // Ethanol boils at 78.4C
 	var/boozepwr = 65 //Higher numbers equal higher hardness, higher hardness equals more intense alcohol poisoning
+	/// To be used for wines to allow for aging in bottles. Use ferementation keg system for other alcohols
+	var/datum/reagent/age_path
+	var/age_time = 5 MINUTES
+	var/age_timer
 
 /datum/reagent/consumable/ethanol/on_bodypart_absorb(mob/living/carbon/affected_mob, obj/item/bodypart/affected_bodypart, amount_to_transfer)
 	affected_bodypart.disinfect_limb(boozepwr)
@@ -30,6 +34,18 @@
 	if(!price_per_unit)
 		price_per_unit = 0.5 + (boozepwr * 0.02)
 
+/datum/reagent/consumable/ethanol/on_merge(data, amount)
+	. = ..()
+	if(age_path && holder)
+		var/timeleft = timeleft(age_timer)
+		var/total_amount = volume + amount
+
+		var/existing_progress = (volume / total_amount) * (age_time - timeleft)
+		var/new_progress = (amount / total_amount) * age_time
+		var/adjusted_progress = existing_progress + new_progress
+
+		age_timer = addtimer(CALLBACK(src, PROC_REF(age_beer)), adjusted_progress, TIMER_OVERRIDE | TIMER_STOPPABLE | TIMER_UNIQUE)
+
 /datum/reagent/consumable/ethanol/on_mob_metabolize(mob/living/L)
 	. = ..()
 	L.increase_chem_effect(CE_PAINKILLER, boozepwr * 0.3, "[type]")
@@ -42,6 +58,11 @@
 	. = ..()
 	O.adjust_germ_level(-boozepwr * reac_volume)
 
+/datum/reagent/consumable/ethanol/proc/age_beer()
+	var/old_volume = volume
+	var/datum/reagents/old_holder = holder
+	holder?.remove_reagent(src.type, volume)
+	old_holder?.add_reagent(age_path, old_volume)
 /*
 Boozepwr Chart
 Note that all higher effects of alcohol poisoning will inherit effects for smaller amounts (i.e. light poisoning inherts from slight poisoning)
@@ -309,6 +330,8 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	boozepwr = 30
 	taste_description = "sickly sweet aged wine"
 	color = "#402249"
+	quality = DRINK_GOOD
+	age_path = /datum/reagent/consumable/ethanol/jackberrywine/delectable
 
 /datum/reagent/consumable/ethanol/jackberrywine/delectable
 	name = "Delectable Jacksberry Wine"
@@ -316,6 +339,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "sickly sweet delectably aged wine"
 	color = "#652679"
 	quality = DRINK_VERYGOOD
+	age_path = null
 
 /datum/reagent/consumable/ethanol/plum_wine
 	name = "Umeshu"
@@ -323,6 +347,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "sickly sweet young wine"
 	color = "#c997d8"
 	quality = DRINK_NICE
+	age_path = /datum/reagent/consumable/ethanol/plum_wine/aged
 
 /datum/reagent/consumable/ethanol/plum_wine/aged
 	name = "Aged Umeshu"
@@ -330,6 +355,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "sickly sweet aged wine"
 	color = "#c27cd8"
 	quality = DRINK_GOOD
+	age_path = /datum/reagent/consumable/ethanol/plum_wine/delectable
 
 /datum/reagent/consumable/ethanol/plum_wine/delectable
 	name = "Delectable Umeshu"
@@ -337,6 +363,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "sickly sweet delectably aged wine"
 	color = "#a854c2"
 	quality = DRINK_VERYGOOD
+	age_path = null
 
 /datum/reagent/consumable/ethanol/tangerine
 	name = "Tangerine Wine"
@@ -344,6 +371,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "bittersweet young wine"
 	color = "#e7aa59"
 	quality = DRINK_NICE
+	age_path = /datum/reagent/consumable/ethanol/tangerine/aged
 
 /datum/reagent/consumable/ethanol/tangerine/aged
 	name = "Aged Tangerine Wine"
@@ -351,6 +379,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "bittersweet aged wine"
 	color = "#d68d2d"
 	quality = DRINK_GOOD
+	age_path = /datum/reagent/consumable/ethanol/tangerine/delectable
 
 /datum/reagent/consumable/ethanol/tangerine/delectable
 	name = "Delectable Tangerine Wine"
@@ -358,6 +387,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "bittersweet delectably aged wine"
 	color = "#eb9321"
 	quality = DRINK_VERYGOOD
+	age_path = null
 
 /datum/reagent/consumable/ethanol/raspberry
 	name = "Raspberry Wine"
@@ -365,6 +395,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "bittersweet young wine"
 	color = "#ee5ea6"
 	quality = DRINK_NICE
+	age_path = /datum/reagent/consumable/ethanol/raspberry/aged
 
 /datum/reagent/consumable/ethanol/raspberry/aged
 	name = "Aged Raspberry Wine"
@@ -372,6 +403,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "bittersweet aged wine"
 	color = "#d83788"
 	quality = DRINK_GOOD
+	age_path = /datum/reagent/consumable/ethanol/raspberry/delectable
 
 /datum/reagent/consumable/ethanol/raspberry/delectable
 	name = "Delectable Raspberry Wine"
@@ -379,6 +411,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "bittersweet delectably aged wine"
 	color = "#db0d74"
 	quality = DRINK_VERYGOOD
+	age_path = null
 
 /datum/reagent/consumable/ethanol/blackberry
 	name = "Blackberry Wine"
@@ -386,6 +419,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "bitter tart young wine"
 	color = "#861491"
 	quality = DRINK_NICE
+	age_path = /datum/reagent/consumable/ethanol/blackberry/aged
 
 /datum/reagent/consumable/ethanol/blackberry/aged
 	name = "Aged Blackberry Wine"
@@ -393,6 +427,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "bitter tart aged wine"
 	color = "#58065f"
 	quality = DRINK_GOOD
+	age_path = /datum/reagent/consumable/ethanol/blackberry/delectable
 
 /datum/reagent/consumable/ethanol/blackberry/delectable
 	name = "Delectable Blackberry Wine"
@@ -400,6 +435,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "bitter tart delectably aged wine"
 	color = "#330038"
 	quality = DRINK_VERYGOOD
+	age_path = null
 
 /datum/reagent/consumable/ethanol/tiefling
 	name = "Tiefling Blood Wine"
@@ -408,6 +444,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	color = "#b32525"
 	quality = DRINK_NICE
 	glows = TRUE
+	age_path = /datum/reagent/consumable/ethanol/tiefling/aged
 
 /datum/reagent/consumable/ethanol/tiefling/aged
 	name = "Aged Tiefling Blood Wine"
@@ -415,6 +452,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "bitter aged wine"
 	color = "#e21313"
 	quality = DRINK_GOOD
+	age_path = /datum/reagent/consumable/ethanol/tiefling/delectable
 
 /datum/reagent/consumable/ethanol/tiefling/delectable
 	name = "Delectable Tiefling Blood Wine"
@@ -422,6 +460,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "bitter delectably aged wine"
 	color = "#ff0000"
 	quality = DRINK_VERYGOOD
+	age_path = null
 
 // Elf Production - Berries & Herbal
 
@@ -603,6 +642,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "a green numbness, then a burning vigor in the heart" // heartburn (healing)
 	color = "#86cca3"
 	quality = DRINK_VERYGOOD // good stuff!
+	age_path = /datum/reagent/consumable/ethanol/luxwine/aged
 
 /datum/reagent/consumable/ethanol/luxwine/on_mob_life(mob/living/carbon/M, efficiency) // stolen healthpot code. i am shameless.
 	M.apply_status_effect(/datum/status_effect/buff/lux_drank)
@@ -621,6 +661,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "a caressing dullness, then a fiery sensation in the heart"
 	color = "#52c984"
 	quality = DRINK_VERYGOOD
+	age_path = /datum/reagent/consumable/ethanol/luxwine/delectable
 
 /datum/reagent/consumable/ethanol/luxwine/aged/on_mob_life(mob/living/carbon/M, efficiency)
 	if(volume > 0.99)
@@ -635,6 +676,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "a comforting warmth, then a searing wound in the heart"
 	color = "#11db65"
 	quality = DRINK_FANTASTIC
+	age_path = null
 
 /datum/reagent/consumable/ethanol/luxwine/delectable/on_mob_life(mob/living/carbon/M, efficiency)
 	var/list/wCount = M.get_wounds()
