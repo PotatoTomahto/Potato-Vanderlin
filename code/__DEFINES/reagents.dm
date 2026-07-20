@@ -45,7 +45,7 @@
 ///The maximum temperature a reagent holder can attain
 #define CHEMICAL_MAXIMUM_TEMPERATURE 99999
 /// the default temperature at which chemicals are added to reagent holders at
-#define DEFAULT_REAGENT_TEMPERATURE 300
+#define DEFAULT_REAGENT_TEMPERATURE T20C
 
 #define MIMEDRINK_SILENCE_DURATION 30  //ends up being 60 seconds given 1 tick every 2 seconds
 //used by chem masters and pill presses
