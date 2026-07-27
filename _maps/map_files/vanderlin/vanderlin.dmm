@@ -49878,7 +49878,7 @@
 /turf/open/floor/blocks,
 /area/indoors/dungeon)
 "vvN" = (
-/obj/structure/closet/crate/crafted_closet/crafted,
+/obj/structure/closet/crate/crafted_closet,
 /obj/item/paper,
 /obj/item/paper,
 /obj/item/paper,
