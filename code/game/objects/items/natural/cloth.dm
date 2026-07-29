@@ -187,7 +187,8 @@
 			reagents.trans_to(O, reagents.total_volume, 1, transfered_by = user)
 			user.visible_message(span_small("[user] wrings out \the [src] in \the [O]."), span_small("I wring out \the [src] in \the [O]."), vision_distance = 2)
 			playsound(O, pick('sound/foley/waterwash (1).ogg','sound/foley/waterwash (2).ogg'), 25, FALSE)
-			reset_bandage()
+			bandage_health = initial(bandage_health)
+			bandage_effectiveness = initial(bandage_effectiveness)
 	else if(isturf(target))
 		var/turf/T = target
 		if(istype(T, /turf/open/water))
@@ -195,16 +196,17 @@
 				reagents.clear_reagents()
 				user.visible_message(span_small("[user] wrings out \the [src] in \the [T]."), span_small("I wring out \the [src] in \the [T]."), vision_distance = 2)
 				playsound(T, pick('sound/foley/waterwash (1).ogg','sound/foley/waterwash (2).ogg'), 25, FALSE)
-				reset_bandage()
 		else
 			if(do_after(user, clean_speed * 2.5, T))
 				T.add_liquid_from_reagents(reagents, amount = reagents.maximum_volume)
 				reagents.clear_reagents()
 				user.visible_message(span_small("[user] wrings out \the [src]."), span_small("I wring out \the [src]."), vision_distance = 2)
 				playsound(T, pick('sound/foley/waterwash (1).ogg','sound/foley/waterwash (2).ogg'), 25, FALSE)
-				reset_bandage()
+				bandage_health = initial(bandage_health)
+				bandage_effectiveness = initial(bandage_effectiveness)
 
 	update_appearance(UPDATE_OVERLAYS)
+
 	return TRUE
 
 /obj/item/natural/cloth/proc/bandage(mob/living/M, mob/user)
@@ -264,7 +266,3 @@
 
 	var/mutable_appearance/emissive_overlay = emissive_appearance(icon, "[icon_state]_soaked", src)
 	. += emissive_overlay
-
-/obj/item/natural/cloth/proc/reset_bandage()
-	bandage_health = initial(bandage_health)
-	bandage_effectiveness = initial(bandage_effectiveness)
