@@ -143,6 +143,7 @@
 		bleed_rate += embedded.embedding.embedded_bloodloss
 
 	var/bleed_multiplier = get_bleed_multiplier()
+	bleed_multiplier *= tourniquet_mod
 
 	// Anything below this block will be completely stopped by bandage
 	if(bandage?.bandage_health)
