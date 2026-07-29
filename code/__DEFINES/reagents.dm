@@ -38,8 +38,6 @@
 /// Used for direct snorting of reagents
 #define SNORT (1<<5)
 
-///stops floating point errors causing issues with checking reagent amounts
-#define CHEMICAL_QUANTISATION_LEVEL 0.0001
 ///The smallest amount of volume allowed - prevents tiny numbers
 #define CHEMICAL_VOLUME_MINIMUM 0.001
 ///The maximum temperature a reagent holder can attain
