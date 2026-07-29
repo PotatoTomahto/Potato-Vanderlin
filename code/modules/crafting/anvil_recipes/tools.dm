@@ -305,7 +305,7 @@
 
 /datum/anvil_recipe/tools/steel/pick
 	name = "Steel Pick"
-	additional_items = list(/obj/item/grown/log/tree/stick)
+	additional_items = list(/obj/item/grown/log/tree/stick = 1)
 	created_item = /obj/item/weapon/pick/steel
 
 /datum/anvil_recipe/tools/steel/gobletsteel

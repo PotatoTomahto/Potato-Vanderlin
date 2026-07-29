@@ -61,7 +61,7 @@
 
 /datum/anvil_recipe/armor/bronze/illyria
 	name = "Bronze Bascinet"
-	additional_items = list( /obj/item/natural/hide/cured = 1)
+	additional_items = list(/obj/item/natural/hide/cured = 1)
 	created_item = /obj/item/clothing/head/helmet/bronze
 
 /datum/anvil_recipe/armor/bronze/protector

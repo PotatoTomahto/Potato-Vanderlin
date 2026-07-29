@@ -86,7 +86,7 @@
 
 /datum/anvil_recipe/weapons/bronze/spear
 	name = "Bronze Spear"
-	additional_items = list(/obj/item/ingot/bronze, /obj/item/grown/log/tree/small)
+	additional_items = list(/obj/item/ingot/bronze = 1, /obj/item/grown/log/tree/small = 1)
 	created_item = /obj/item/weapon/polearm/spear/bronze
 
 /datum/anvil_recipe/weapons/bronze/cane
@@ -207,7 +207,7 @@
 
 /datum/anvil_recipe/weapons/iron/bardiche
 	name = "Bardiche"
-	additional_items = list(/obj/item/ingot/iron,/obj/item/grown/log/tree/small)
+	additional_items = list(/obj/item/ingot/iron = 1, /obj/item/grown/log/tree/small = 1)
 	created_item = /obj/item/weapon/polearm/halberd/bardiche
 	craftdiff = 2
 
@@ -668,7 +668,7 @@
 /datum/anvil_recipe/weapons/steel/zweihander
 	name = "Zweihander (+Steel Bar x2)"
 	appro_skill = /datum/attribute/skill/craft/weaponsmithing
-	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel)
+	additional_items = list(/obj/item/ingot/steel = 2)
 	created_item = /obj/item/weapon/sword/long/greatsword/zwei/steel
 	craftdiff = 4
 
@@ -905,7 +905,7 @@
 /datum/anvil_recipe/weapons/silver/mace
 	name = "Silver Mace (+Silver Bar)"
 	appro_skill = /datum/attribute/skill/craft/weaponsmithing
-	additional_items = list(/obj/item/ingot/silver)
+	additional_items = list(/obj/item/ingot/silver = 1)
 	created_item = /obj/item/weapon/mace/silver
 
 /datum/anvil_recipe/weapons/silver/barmace
