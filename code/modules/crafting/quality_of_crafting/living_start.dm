@@ -36,7 +36,7 @@
 		if(!SShousing.check_access(key))
 			return FALSE
 
-	if(HAS_TRAIT(src, TRAIT_CURSE_MALUM))
+	if(HAS_TRAIT(src, TRAIT_MALUM_CURSE))
 		to_chat(src, span_boldred("My cursed hands tremble as I fail to piece the materials together!"))
 		return
 

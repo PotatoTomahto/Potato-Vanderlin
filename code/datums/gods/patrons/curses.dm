@@ -108,7 +108,7 @@
 /datum/curse/malum
 	name = "Curse of Malum"
 	description = "I am forsaken by the Maker. My hands tremble when performing hands-on labor."
-	trait = TRAIT_CURSE_MALUM
+	trait = TRAIT_MALUM_CURSE
 
 //////////////////////
 /// INHUMEN CURSES ///
