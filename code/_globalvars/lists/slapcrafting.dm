@@ -4,10 +4,10 @@ GLOBAL_LIST_INIT(slapcraft_steps, init_slapcraft_steps())
 
 /proc/init_slapcraft_steps()
 	var/list/step_list = list()
-	for(var/datum/slapcraft_step/type as anything in typesof(/datum/slapcraft_step))
-		if(IS_ABSTRACT(type))
+	for(var/datum/slapcraft_step/step_type as anything in typesof(/datum/slapcraft_step))
+		if(IS_ABSTRACT(step_type))
 			continue
-		step_list[type] = new type()
+		step_list[step_type] = new step_type()
 
 	return step_list
 
@@ -16,12 +16,12 @@ GLOBAL_LIST_INIT(slapcraft_recipes, init_slapcraft_recipes())
 
 /proc/init_slapcraft_recipes()
 	var/list/recipe_list = list()
-	for(var/datum/slapcraft_recipe/type as anything in typesof(/datum/slapcraft_recipe))
-		if(IS_ABSTRACT(type))
+	for(var/datum/slapcraft_recipe/recipe_type as anything in typesof(/datum/slapcraft_recipe))
+		if(IS_ABSTRACT(recipe_type))
 			continue
 
-		var/datum/slapcraft_recipe/recipe = new type()
-		recipe_list[type] = recipe
+		var/datum/slapcraft_recipe/recipe = new recipe_type()
+		recipe_list[recipe_type] = recipe
 
 		// Add the recipe to the categorized global list, which is used for the handbook UI
 		if(!length(GLOB.slapcraft_categorized_recipes[recipe.category]))

@@ -48,7 +48,7 @@
 	return TRUE
 
 /datum/brewing_recipe/proc/get_display_name(lowertext = TRUE)
-	return lowertext ? lowertext(name) : name
+	return lowertext ? LOWER_TEXT(name) : name
 
 /datum/brewing_recipe/proc/create_items(mob/user, obj/item/attacked_item, obj/structure/fermentation_keg/source_keg, number_of_repeats)
 	var/obj/item/bottle_kit/bottle_kit = attacked_item
