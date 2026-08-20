@@ -33722,7 +33722,6 @@
 /obj/machinery/light/fueled/wallfire/candle{
 	pixel_y = -32
 	},
-/obj/item/repair_kit/cloth/empty,
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/town/shop)
 "oHw" = (
@@ -44675,10 +44674,6 @@
 	},
 /turf/open/water/ocean/abyss,
 /area/outdoors/town)
-"toc" = (
-/obj/item/repair_kit/metal/empty,
-/turf/open/floor/blocks,
-/area/indoors/town/smithy)
 "tom" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/nosmooth,
@@ -118375,7 +118370,7 @@ sCJ
 ouY
 kmk
 hCp
-toc
+hCp
 hCp
 hCp
 hCp
