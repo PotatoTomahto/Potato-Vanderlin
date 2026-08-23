@@ -105,7 +105,7 @@
 				additional_items -= needed_item
 			to_chat(user, span_notice("Now it's time to add \a [needed_item.name]."))
 			user.balloon_alert(user, "add \a [needed_item.name]!")
-			progress = 0
+			progress -= 100
 		else
 			to_chat(user, span_info("It's ready."))
 
