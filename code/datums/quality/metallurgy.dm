@@ -69,4 +69,4 @@
 
 /datum/quality_calculator/metallurgy/track_item_creation(obj/item/target, final_quality)
 	if(final_quality >= SMELTERY_QUALITY_EXCELLENT)
-		record_round_statistic(STATS_MASTERWORKS_FORGED, 1)
+		record_round_statistic(STATS_MASTERWORKS_PRODUCED, 1)

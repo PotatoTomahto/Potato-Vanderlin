@@ -106,4 +106,4 @@
 /datum/quality_calculator/blacksmithing/track_item_creation(obj/item/target, final_quality)
 	// Track masterworks if enabled
 	if(final_quality >= BLACKSMITH_QUALITY_LEGENDARY)
-		record_round_statistic(STATS_MASTERWORKS_FORGED, 1)
+		record_round_statistic(STATS_MASTERWORKS_PRODUCED, 1)
