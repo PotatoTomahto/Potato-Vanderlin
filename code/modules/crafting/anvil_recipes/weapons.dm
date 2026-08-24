@@ -151,7 +151,7 @@
 	created_item = /obj/item/weapon/polearm/spear/billhook/ji/bronze
 
 /datum/anvil_recipe/weapons/bronze/bronze_whip
-	name = "Bronze Whip (+Cured Hide x2)"
+	name = "Bronze Whip"
 	additional_items = list(/obj/item/natural/hide/cured,/obj/item/natural/hide/cured)
 	created_item = /obj/item/weapon/whip/bronze
 
@@ -473,7 +473,7 @@
 	created_item = /obj/item/weapon/sword/scimitar/wodao
 
 /datum/anvil_recipe/weapons/steel/whip
-	name = "Steel Whip (+Cured Hide x2)"
+	name = "Steel Whip"
 	additional_items = list(/obj/item/natural/hide/cured, /obj/item/natural/hide/cured)
 	created_item = /obj/item/weapon/whip/steel
 
@@ -547,7 +547,7 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/weapons/steel/double_battleaxe
-	name = "Double-headed Battle Axe (+Steel Bar x2)"
+	name = "Double-headed Battle Axe"
 	appro_skill = /datum/attribute/skill/craft/weaponsmithing
 	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel)
 	created_item = /obj/item/weapon/axe/battle/double
@@ -666,7 +666,7 @@
 	craftdiff = 4
 
 /datum/anvil_recipe/weapons/steel/zweihander
-	name = "Zweihander (+Steel Bar x2)"
+	name = "Zweihander"
 	appro_skill = /datum/attribute/skill/craft/weaponsmithing
 	additional_items = list(/obj/item/ingot/steel = 2)
 	created_item = /obj/item/weapon/sword/long/greatsword/zwei/steel
@@ -704,7 +704,7 @@
 	created_item = /obj/item/weapon/scabbard/knife/royal
 
 /datum/anvil_recipe/weapons/gold/staff
-	name = "Golden Quarterstaff (+Small Log)"
+	name = "Golden Quarterstaff"
 	appro_skill = /datum/attribute/skill/craft/weaponsmithing
 	additional_items = list(/obj/item/grown/log/tree/small)
 	created_item = /obj/item/weapon/polearm/woodstaff/quarterstaff/gold
@@ -754,13 +754,13 @@
 	created_item = /obj/item/weapon/mace/steel
 
 /datum/anvil_recipe/weapons/steel/flanged_mace
-	name = "Steel Flanged Mace (+Bar)"
+	name = "Steel Flanged Mace"
 	appro_skill = /datum/attribute/skill/craft/weaponsmithing
 	additional_items = list(/obj/item/ingot/steel)
 	created_item = /obj/item/weapon/mace/steel/flanged
 
 /datum/anvil_recipe/weapons/steel/barmace
-	name = "Steel Mace (+Bar x2)"
+	name = "Steel Mace"
 	appro_skill = /datum/attribute/skill/craft/weaponsmithing
 	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel)
 	created_item = /obj/item/weapon/mace/steel/barmace
@@ -903,13 +903,13 @@
 	created_item = /obj/item/weapon/sword/long/greatsword/claymore/silver
 
 /datum/anvil_recipe/weapons/silver/mace
-	name = "Silver Mace (+Silver Bar)"
+	name = "Silver Mace"
 	appro_skill = /datum/attribute/skill/craft/weaponsmithing
 	additional_items = list(/obj/item/ingot/silver = 1)
 	created_item = /obj/item/weapon/mace/silver
 
 /datum/anvil_recipe/weapons/silver/barmace
-	name = "Silver Barmace (+Silver Bar x2)"
+	name = "Silver Barmace"
 	appro_skill = /datum/attribute/skill/craft/weaponsmithing
 	additional_items = list(/obj/item/ingot/silver, /obj/item/ingot/silver)
 	created_item = /obj/item/weapon/mace/silver/barmace
@@ -1030,12 +1030,12 @@
 	craftdiff = 6
 
 /datum/anvil_recipe/weapons/blacksteel/battleaxe
-	name = "Blacksteel Axe (+Blacksteel Bar)"
+	name = "Blacksteel Axe"
 	additional_items = list(/obj/item/ingot/blacksteel)
 	created_item = /obj/item/weapon/axe/battle/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/double_battleaxe
-	name = "Double-headed Blacksteel Axe (+Blacksteel Bar x2)"
+	name = "Double-headed Blacksteel Axe"
 	additional_items = list(/obj/item/ingot/blacksteel, /obj/item/ingot/blacksteel)
 	created_item = /obj/item/weapon/axe/battle/blacksteel/double
 
@@ -1064,27 +1064,27 @@
 	created_item = /obj/item/weapon/sword/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/arming_dec
-	name = "Decorated Blacksteel Arming Sword (+Gold Bar)"
+	name = "Decorated Blacksteel Arming Sword"
 	created_item = /obj/item/weapon/sword/blacksteel/decorated
 	additional_items = list(/obj/item/ingot/gold)
 
 /datum/anvil_recipe/weapons/blacksteel/longsword
-	name = "Blacksteel Longsword (+Blacksteel Bar)"
+	name = "Blacksteel Longsword"
 	additional_items = list(/obj/item/ingot/blacksteel)
 	created_item = /obj/item/weapon/sword/long/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/whip
-	name = "Blacksteel Whip (+Cured Hide x2 +Silk)"
+	name = "Blacksteel Whip"
 	additional_items = list(/obj/item/natural/hide/cured, /obj/item/natural/hide/cured, /obj/item/natural/silk)
 	created_item = /obj/item/weapon/whip/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/quarterstaff
-	name = "Blacksteel Quarterstaff (+Small Log)"
+	name = "Blacksteel Quarterstaff"
 	additional_items = list(/obj/item/grown/log/tree/small)
 	created_item = /obj/item/weapon/polearm/woodstaff/quarterstaff/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/halberd
-	name = "Blacksteel Halberd (+Blacksteel Bar, +Small Log)"
+	name = "Blacksteel Halberd"
 	additional_items = list(/obj/item/ingot/blacksteel, /obj/item/grown/log/tree/small)
 	created_item = /obj/item/weapon/polearm/halberd/blacksteel
 
@@ -1099,12 +1099,12 @@
 	created_item = /obj/item/weapon/greataxe/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/mace
-	name = "Blacksteel Mace (+Blacksteel Bar)"
+	name = "Blacksteel Mace"
 	additional_items = list(/obj/item/ingot/blacksteel)
 	created_item = /obj/item/weapon/mace/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/barmace
-	name = "Blacksteel Barmace (+Blacksteel Bar x2)"
+	name = "Blacksteel Barmace"
 	additional_items = list(/obj/item/ingot/blacksteel, /obj/item/ingot/blacksteel)
 	created_item = /obj/item/weapon/mace/blacksteel/barmace
 
@@ -1114,7 +1114,7 @@
 	created_item = /obj/item/weapon/flail/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/warhammer
-	name = "Blacksteel Warhammer (+Blacksteel Bar)"
+	name = "Blacksteel Warhammer"
 	additional_items = list(/obj/item/ingot/blacksteel)
 	created_item = /obj/item/weapon/mace/warhammer/blacksteel
 
@@ -1196,7 +1196,7 @@
 	craftdiff = 2
 
 /datum/anvil_recipe/weapons/bearded_axe
-	name = "Bearded axe (+Small Log)"
+	name = "Bearded axe"
 	required_material = /obj/item/ingot/steel
 	additional_items = list(/obj/item/grown/log/tree/small = 1)
 	created_item = /obj/item/weapon/axe/steel/bearded

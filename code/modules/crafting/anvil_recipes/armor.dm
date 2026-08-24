@@ -577,17 +577,17 @@
 	additional_items = list(/obj/item/ingot/bronze = 1)
 
 /datum/anvil_recipe/armor/steel/templar/helmet_cadwyn_astrata
-	name = "Cadwyn Plumed Helmet (+Silver Bar, +Cloth)"
+	name = "Cadwyn Plumed Helmet"
 	created_item = /obj/item/clothing/head/helmet/heavy/necked/cadwyn/astrata
 	additional_items = list(/obj/item/ingot/silver, /obj/item/natural/cloth)
 
 /datum/anvil_recipe/armor/steel/templar/helmet_cadwyn_necra
-	name = "Cadwyn Skull-Helm (+Silver Bar, +Cloth)"
+	name = "Cadwyn Skull-Helm"
 	created_item = /obj/item/clothing/head/helmet/heavy/necked/cadwyn/necra
 	additional_items = list(/obj/item/ingot/silver, /obj/item/natural/cloth)
 
 /datum/anvil_recipe/armor/steel/templar/helmet_cadwyn_ravox
-	name = "Cadwyn Ox-Helm (+Silver Bar, +Cloth)"
+	name = "Cadwyn Ox-Helm"
 	created_item = /obj/item/clothing/head/helmet/heavy/necked/cadwyn/ravox
 	additional_items = list(/obj/item/ingot/silver, /obj/item/natural/cloth)
 
@@ -1033,7 +1033,7 @@
 	created_item = /obj/item/clothing/head/helmet/visored/silver/armet
 
 /datum/anvil_recipe/armor/silver/armetowl
-	name = "Lunar Owl Armet (+Steel Bar x2)"
+	name = "Lunar Owl Armet"
 	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel)
 	created_item = /obj/item/clothing/head/helmet/visored/knight/owl/lunar
 
@@ -1067,7 +1067,7 @@
 	craftdiff = 4
 
 /datum/anvil_recipe/armor/silver/gorget
-	name = "Silver Gorget (+Steel Bar)"
+	name = "Silver Gorget"
 	additional_items = list(/obj/item/ingot/steel)
 	created_item = /obj/item/clothing/neck/gorget/silver
 
