@@ -175,7 +175,7 @@
 
 	if(quality_score >= MINIMUM_ANVIL_MINIGAME_SCORE) // Did you even try?
 		var/recipe_skill = recipe.appro_skill
-		var/amt2raise = max(GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE), 1) * 1.5 // It would be impossible to level up otherwise
+		var/amt2raise = max(GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE), 1) * 1.6 // It would be impossible to level up otherwise
 		amt2raise *= user.get_learning_boon(recipe_skill)
 		if(HAS_TRAIT(user, TRAIT_MALUMFIRE) || GET_MOB_SKILL_VALUE_OLD(user, recipe_skill) < 3)// Sanity, no expert blacksmith has lower skill than 3, for if admins manually add the trait or blacksmith vampire thralls
 			user.mind.add_sleep_experience(recipe_skill, amt2raise, FALSE)
