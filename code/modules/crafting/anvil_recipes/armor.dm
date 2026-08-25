@@ -1068,7 +1068,7 @@
 
 /datum/anvil_recipe/armor/silver/gorget
 	name = "Silver Gorget"
-	additional_items = list(/obj/item/ingot/steel)
+	additional_items = list(/obj/item/ingot/steel = 1)
 	created_item = /obj/item/clothing/neck/gorget/silver
 
 // --------- BLACKSTEEL -----------

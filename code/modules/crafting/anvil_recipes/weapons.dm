@@ -1031,12 +1031,12 @@
 
 /datum/anvil_recipe/weapons/blacksteel/battleaxe
 	name = "Blacksteel Axe"
-	additional_items = list(/obj/item/ingot/blacksteel)
+	additional_items = list(/obj/item/ingot/blacksteel = 1)
 	created_item = /obj/item/weapon/axe/battle/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/double_battleaxe
 	name = "Double-headed Blacksteel Axe"
-	additional_items = list(/obj/item/ingot/blacksteel, /obj/item/ingot/blacksteel)
+	additional_items = list(/obj/item/ingot/blacksteel = 2)
 	created_item = /obj/item/weapon/axe/battle/blacksteel/double
 
 /datum/anvil_recipe/weapons/blacksteel/knuckles
@@ -1066,26 +1066,26 @@
 /datum/anvil_recipe/weapons/blacksteel/arming_dec
 	name = "Decorated Blacksteel Arming Sword"
 	created_item = /obj/item/weapon/sword/blacksteel/decorated
-	additional_items = list(/obj/item/ingot/gold)
+	additional_items = list(/obj/item/ingot/gold = 1)
 
 /datum/anvil_recipe/weapons/blacksteel/longsword
 	name = "Blacksteel Longsword"
-	additional_items = list(/obj/item/ingot/blacksteel)
+	additional_items = list(/obj/item/ingot/blacksteel = 1)
 	created_item = /obj/item/weapon/sword/long/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/whip
 	name = "Blacksteel Whip"
-	additional_items = list(/obj/item/natural/hide/cured, /obj/item/natural/hide/cured, /obj/item/natural/silk)
+	additional_items = list(/obj/item/natural/hide/cured = 2, /obj/item/natural/silk = 1)
 	created_item = /obj/item/weapon/whip/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/quarterstaff
 	name = "Blacksteel Quarterstaff"
-	additional_items = list(/obj/item/grown/log/tree/small)
+	additional_items = list(/obj/item/grown/log/tree/small = 1)
 	created_item = /obj/item/weapon/polearm/woodstaff/quarterstaff/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/halberd
 	name = "Blacksteel Halberd"
-	additional_items = list(/obj/item/ingot/blacksteel, /obj/item/grown/log/tree/small)
+	additional_items = list(/obj/item/ingot/blacksteel = 1, /obj/item/grown/log/tree/small = 1)
 	created_item = /obj/item/weapon/polearm/halberd/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/eaglebeak
@@ -1100,22 +1100,27 @@
 
 /datum/anvil_recipe/weapons/blacksteel/mace
 	name = "Blacksteel Mace"
-	additional_items = list(/obj/item/ingot/blacksteel)
+	additional_items = list(/obj/item/ingot/blacksteel = 1)
 	created_item = /obj/item/weapon/mace/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/barmace
 	name = "Blacksteel Barmace"
-	additional_items = list(/obj/item/ingot/blacksteel, /obj/item/ingot/blacksteel)
+	additional_items = list(/obj/item/ingot/blacksteel = 2)
 	created_item = /obj/item/weapon/mace/blacksteel/barmace
 
 /datum/anvil_recipe/weapons/blacksteel/flail
-	name = "Blacksteel Flail (+Chain, +Stick)"
-	additional_items = list(/obj/item/rope/chain, /obj/item/grown/log/tree/stick)
+	name = "Blacksteel Flail"
+	additional_items = list(/obj/item/rope/chain = 1, /obj/item/grown/log/tree/stick = 1)
 	created_item = /obj/item/weapon/flail/blacksteel
+
+/datum/anvil_recipe/weapons/blacksteel/battleaxe
+	name = "Blacksteel Battle Axe"
+	additional_items = list(/obj/item/ingot/blacksteel = 1)
+	created_item = /obj/item/weapon/axe/battle/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/warhammer
 	name = "Blacksteel Warhammer"
-	additional_items = list(/obj/item/ingot/blacksteel)
+	additional_items = list(/obj/item/ingot/blacksteel = 1)
 	created_item = /obj/item/weapon/mace/warhammer/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/kiteshield
@@ -1155,28 +1160,28 @@
 	created_item = /obj/item/weapon/sword/bloodsteel
 
 /datum/anvil_recipe/weapons/bloodsteel/broadsword
-	name = "Bloodsteel Broadsword (+Bloodsteel Bar)"
-	additional_items = list(/obj/item/ingot/bloodsteel)
+	name = "Bloodsteel Broadsword"
+	additional_items = list(/obj/item/ingot/bloodsteel = 1)
 	created_item = /obj/item/weapon/sword/long/greatsword/claymore/bloodsteel
 
 /datum/anvil_recipe/weapons/bloodsteel/whip
-	name = "Bloodsteel Whip (+Cured Hide x2)"
-	additional_items = list(/obj/item/natural/hide/cured, /obj/item/natural/hide/cured)
+	name = "Bloodsteel Whip"
+	additional_items = list(/obj/item/natural/hide/cured = 2)
 	created_item = /obj/item/weapon/whip/bloodsteel
 
 /datum/anvil_recipe/weapons/bloodsteel/quarterstaff
-	name = "Bloodsteel Quarterstaff (+Small Log)"
-	additional_items = list(/obj/item/grown/log/tree/small)
+	name = "Bloodsteel Quarterstaff"
+	additional_items = list(/obj/item/grown/log/tree/small = 1)
 	created_item = /obj/item/weapon/polearm/woodstaff/quarterstaff/bloodsteel
 
 /datum/anvil_recipe/weapons/bloodsteel/halberd
-	name = "Bloodsteel Halberd (+Bloodsteel Bar, +Small Log)"
-	additional_items = list(/obj/item/ingot/blacksteel, /obj/item/grown/log/tree/small)
+	name = "Bloodsteel Halberd"
+	additional_items = list(/obj/item/ingot/blacksteel = 1, /obj/item/grown/log/tree/small = 1)
 	created_item = /obj/item/weapon/polearm/halberd/bloodsteel
 
 /datum/anvil_recipe/weapons/bloodsteel/spear
-	name = "Bloodsteel Spears (+Small Log)"
-	additional_items = list(/obj/item/grown/log/tree/small)
+	name = "Bloodsteel Spears"
+	additional_items = list(/obj/item/grown/log/tree/small = 1)
 	created_item = /obj/item/weapon/polearm/spear/bloodsteel
 	output_amount = 2
 
