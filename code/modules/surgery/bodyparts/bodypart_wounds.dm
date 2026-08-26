@@ -125,13 +125,6 @@
 	if(!bleeds)
 		return 0
 
-	var/tourniquet_mod = 1
-	if(tourniquet)
-		if(tourniquet.bleed_mod)
-			tourniquet_mod = tourniquet.bleed_mod
-		else
-			return 0
-
 	var/bleed_rate = 0
 
 	// Bleed sources with their own math or ignore bandages
@@ -143,7 +136,6 @@
 		bleed_rate += embedded.embedding.embedded_bloodloss
 
 	var/bleed_multiplier = get_bleed_multiplier()
-	bleed_multiplier *= tourniquet_mod
 
 	// Anything below this block will be completely stopped by bandage
 	if(bandage?.bandage_health)
@@ -172,6 +164,11 @@
 
 /obj/item/bodypart/proc/get_bleed_multiplier()
 	. = 1
+	if(tourniquet)
+		if(tourniquet.bleed_mod)
+			. *= tourniquet.bleed_mod
+		else
+			return 0
 	if(return_surgical_state() & SURGERY_VESSELS_CLAMPED)
 		. *= 0.5
 	for(var/obj/item/grabbing/grab as anything in grabbedby)
