@@ -42,7 +42,7 @@
 	if(avg_performance > MINIMUM_ANVIL_MINIGAME_SCORE)
 		performance_component = (avg_performance / 100) * 3
 	else
-		performance_component = (avg_performance - MINIMUM_ANVIL_MINIGAME_SCORE) * 3
+		performance_component = (avg_performance - MINIMUM_ANVIL_MINIGAME_SCORE)
 	var/difficulty_penalty = difficulty_modifier * 0.4
 
 	var/final_quality = skill_component + material_component + performance_component - difficulty_penalty
