@@ -159,7 +159,7 @@
 				for(var/datum/reagent/reagent in bandage_reagents.reagent_list)
 					if(istype(reagent, /datum/reagent/blood))
 						continue
-					var/amount_to_transfer = round(min(reagent.volume, reagent.metabolization_rate), CHEMICAL_QUANTISATION_LEVEL)
+					var/amount_to_transfer = round(min(reagent.volume, reagent.metabolization_rate), 0.0001)//CHEMICAL_QUANTISATION_LEVEL
 					if(amount_to_transfer <= 0)
 						continue
 					if(reagent.on_bodypart_absorb(owner, bleed_part, amount_to_transfer))
