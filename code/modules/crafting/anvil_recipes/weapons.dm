@@ -1089,8 +1089,8 @@
 	created_item = /obj/item/weapon/polearm/halberd/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/eaglebeak
-	name = "Blacksteel Eagle's Beak (+Blacksteel Bar, +Small Log)"
-	additional_items = list(/obj/item/ingot/blacksteel, /obj/item/grown/log/tree/small)
+	name = "Blacksteel Eagle's Beak"
+	additional_items = list(/obj/item/ingot/blacksteel = 1, /obj/item/grown/log/tree/small = 1)
 	created_item = /obj/item/weapon/polearm/eaglebeak/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/greataxe
