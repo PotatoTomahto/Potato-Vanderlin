@@ -710,9 +710,9 @@
 	created_item = /obj/item/weapon/polearm/woodstaff/quarterstaff/gold
 
 /datum/anvil_recipe/weapons/gold/kiteshield
-	name = "Golden Kite Shield (+Bar x2)"
+	name = "Golden Kite Shield"
 	appro_skill = /datum/attribute/skill/craft/armorsmithing
-	additional_items = list(/obj/item/ingot/gold, /obj/item/ingot/gold)
+	additional_items = list(/obj/item/ingot/gold = 2)
 	created_item = /obj/item/weapon/shield/tower/metal/gold
 
 /datum/anvil_recipe/weapons/steel/halberd
@@ -1094,8 +1094,8 @@
 	created_item = /obj/item/weapon/polearm/eaglebeak/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/greataxe
-	name = "Blacksteel Greataxe (+Blacksteel Bar, +Small Log)"
-	additional_items = list(/obj/item/ingot/blacksteel, /obj/item/grown/log/tree/small)
+	name = "Blacksteel Greataxe"
+	additional_items = list(/obj/item/ingot/blacksteel = 1, /obj/item/grown/log/tree/small = 1)
 	created_item = /obj/item/weapon/greataxe/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/mace
@@ -1124,14 +1124,14 @@
 	created_item = /obj/item/weapon/mace/warhammer/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/kiteshield
-	name = "Blacksteel Kite Shield (+Bar x2)"
+	name = "Blacksteel Kite Shield"
 	appro_skill = /datum/attribute/skill/craft/armorsmithing
-	additional_items = list(/obj/item/ingot/blacksteel, /obj/item/ingot/blacksteel)
+	additional_items = list(/obj/item/ingot/blacksteel = 2)
 	created_item = /obj/item/weapon/shield/tower/metal/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/flamberge
-	name = "Blacksteel Flamberge (+Bar x3)"
-	additional_items = list(/obj/item/ingot/blacksteel, /obj/item/ingot/blacksteel, /obj/item/ingot/blacksteel)
+	name = "Blacksteel Flamberge"
+	additional_items = list(/obj/item/ingot/blacksteel = 3)
 	created_item = /obj/item/weapon/sword/long/greatsword/flamberge/blacksteel
 
 // --------------- Bloodsteel --------------------
@@ -1186,8 +1186,8 @@
 	output_amount = 2
 
 /datum/anvil_recipe/weapons/bloodsteel/flail
-	name = "Bloodsteel Flail (+Chain, +Stick)"
-	additional_items = list(/obj/item/rope/chain, /obj/item/grown/log/tree/stick)
+	name = "Bloodsteel Flail"
+	additional_items = list(/obj/item/rope/chain = 1, /obj/item/grown/log/tree/stick = 1)
 	created_item = /obj/item/weapon/flail/bloodsteel
 
 // ------------------ Miscellaneous Weapons ------------------
