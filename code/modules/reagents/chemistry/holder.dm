@@ -1067,6 +1067,8 @@
 		if(ckey(chem_name) == ckey(LOWER_TEXT(R.name)))
 			return X
 
+#undef CHEMICAL_QUANTISATION_LEVEL
+
 //===============================Logging==========================================
 /// Outputs a log-friendly list of reagents based on the internal reagent_list.
 /datum/reagents/proc/get_reagent_log_string()
