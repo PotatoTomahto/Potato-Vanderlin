@@ -1322,7 +1322,7 @@
 	created_item = /obj/item/clothing/head/helmet/blacksteel/psythorns
 	craftdiff = 3
 
-/datum/anvil_recipe/armor/steel/hauberk
+/datum/anvil_recipe/armor/steel/hauberk_fluted
 	name = "fluted hauberk"
 	additional_items = list(/obj/item/ingot/steel = 1)
 	created_item = /obj/item/clothing/armor/chainmail/hauberk/fluted

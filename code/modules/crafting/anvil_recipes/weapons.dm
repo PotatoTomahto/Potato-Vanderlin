@@ -1176,7 +1176,7 @@
 
 /datum/anvil_recipe/weapons/bloodsteel/halberd
 	name = "Bloodsteel Halberd"
-	additional_items = list(/obj/item/ingot/blacksteel = 1, /obj/item/grown/log/tree/small = 1)
+	additional_items = list(/obj/item/ingot/bloodsteel = 1, /obj/item/grown/log/tree/small = 1)
 	created_item = /obj/item/weapon/polearm/halberd/bloodsteel
 
 /datum/anvil_recipe/weapons/bloodsteel/spear
