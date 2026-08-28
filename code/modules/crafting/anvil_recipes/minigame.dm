@@ -231,7 +231,6 @@
 
 /atom/movable/screen/hud_note/proc/generate_click_type(difficulty)
 	switch(rand(1, difficulty))
-		// EASY NOTES
 		if(1)
 			click_requirements = list(LEFT_CLICK)
 			icon_state = "note"
@@ -239,16 +238,15 @@
 			click_requirements = list(RIGHT_CLICK)
 			icon_state = "note-right"
 		if(3)
-			click_requirements = list(MIDDLE_CLICK)
-			icon_state = "note-middle"
-		// HARD NOTES
-		if(4)
 			if(prob(50))
 				click_requirements = list(LEFT_CLICK, ALT_CLICKED)
 				icon_state = "note-alt"
 			else
 				click_requirements = list(RIGHT_CLICK, ALT_CLICKED)
 				icon_state = "note-right-alt"
+		if(4)
+			click_requirements = list(MIDDLE_CLICK)
+			icon_state = "note-middle"
 		if(5)
 			click_requirements = list(MIDDLE_CLICK, ALT_CLICKED)
 			icon_state = "note-middle-alt"
