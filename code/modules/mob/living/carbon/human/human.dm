@@ -1125,7 +1125,7 @@
 
 //OVERRIDE IGNORING PARENT RETURN VALUE
 /mob/living/carbon/human/updatehealth(amount)
-	if(status_flags & GODMODE)
+	if(HAS_TRAIT(src, TRAIT_GODMODE))
 		return
 	var/total_burn	= 0
 //	var/total_brute	= 0
