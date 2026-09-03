@@ -13,7 +13,7 @@
 	current_blood = 20
 	blood_req = 2
 	oxygen_req = 4
-	nutriment_req = 0.015
+	nutriment_req = 0.01
 	hydration_req = 0.02
 
 	low_threshold_passed = "<span class='info'>My stomach flashes with pain before subsiding. Food doesn't seem like a good idea right now.</span>"
