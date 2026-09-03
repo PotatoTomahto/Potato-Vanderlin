@@ -695,8 +695,8 @@ SUBSYSTEM_DEF(job)
 	// Ready up bonus
 	if(!equipping.islatejoin && player_client)
 		equipping.apply_status_effect(/datum/status_effect/buff/foodbuff)
-		equipping.set_hydration(HYDRATION_LEVEL_WATER_LOGGED - 1)
-		equipping.set_nutrition(NUTRITION_LEVEL_FAT - 1)
+		equipping.set_hydration(HYDRATION_LEVEL_HYDRATED)
+		equipping.set_nutrition(NUTRITION_LEVEL_WELL_FED)
 		var/triumphs = 1
 		if(is_lord_job(job)) //monarch bonus
 			to_chat(player_client, span_notice("Heavy is the weight of the crown. But you have the resolve to wear it high. In this, you TRIUMPH."))
