@@ -31,6 +31,7 @@
 	name = "Peckish"
 	desc = span_warning("I could use a bite.</span>\n")
 	icon_state = "hunger1"
+	alert_group = ALERT_STATUS
 
 /**
  * T2
@@ -112,6 +113,7 @@
 	name = "Getting thirsty"
 	desc = span_warning("I could use a drink.\n")
 	icon_state = "thirst1"
+	alert_group = ALERT_STATUS
 
 /**
  * T2
