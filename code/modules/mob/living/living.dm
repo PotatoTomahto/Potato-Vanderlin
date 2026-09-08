@@ -1103,7 +1103,7 @@
 
 	if(heal_flags & HEAL_ESSENTIALS)
 		set_nutrition(NUTRITION_LEVEL_WELL_FED)
-		set_hydration(HYDRATION_LEVEL_HYDRATED)
+		set_hydration(HYDRATION_LEVEL_WELL_HYDRATED)
 
 	set_disgust(0)
 	cure_husk()

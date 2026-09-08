@@ -1232,14 +1232,14 @@ GLOBAL_VAR_INIT(mobids, 1)
 
 /mob/proc/adjust_hydration(change, forced)
 	if(HAS_TRAIT(src, TRAIT_NOHUNGER) && !forced)
-		hydration = HYDRATION_LEVEL_HYDRATED
+		hydration = HYDRATION_LEVEL_WELL_HYDRATED
 		return
 
 	hydration = clamp(hydration + change, 0, HYDRATION_LEVEL_FULL)
 
 /mob/proc/set_hydration(set_to, forced)
 	if(HAS_TRAIT(src, TRAIT_NOHUNGER) && !forced)
-		hydration = HYDRATION_LEVEL_HYDRATED
+		hydration = HYDRATION_LEVEL_WELL_HYDRATED
 		return
 
 	hydration = clamp(set_to, 0, HYDRATION_LEVEL_FULL)
