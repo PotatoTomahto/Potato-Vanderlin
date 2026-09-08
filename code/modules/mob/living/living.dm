@@ -1102,7 +1102,7 @@
 		setShockStage(0, FALSE, TRUE)
 
 	if(heal_flags & HEAL_ESSENTIALS)
-		set_nutrition(NUTRITION_LEVEL_FED)
+		set_nutrition(NUTRITION_LEVEL_WELL_FED)
 		set_hydration(HYDRATION_LEVEL_HYDRATED)
 
 	set_disgust(0)
