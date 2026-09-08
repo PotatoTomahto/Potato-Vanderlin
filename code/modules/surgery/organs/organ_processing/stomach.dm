@@ -47,7 +47,7 @@
 				owner.set_jitter_if_lower(10 SECONDS)
 			hunger_rate *= 3
 		hunger_rate *= owner.physiology.hunger_mod
-		hunger_rate *= optimal_threshold/max(stomach_efficiency, failing_threshold)
+		// hunger_rate *= optimal_threshold/max(stomach_efficiency, failing_threshold)
 		if (ishuman(owner))
 			hunger_rate *= owner.dna.species.nutrition_mod
 		owner.adjust_nutrition(-hunger_rate * delta_time)
