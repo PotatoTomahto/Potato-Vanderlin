@@ -14,8 +14,8 @@
 			injury.movement_infect(src)
 
 		if(!HAS_TRAIT(src, TRAIT_NOHUNGER) && stat != DEAD)
-			adjust_nutrition(-0.05)
-			adjust_hydration(-0.05)
+			adjust_nutrition(-0.02)
+			adjust_hydration(-0.02)
 			if(m_intent == MOVE_INTENT_RUN)
 				adjust_nutrition(-0.1)
 				adjust_hydration(-0.1)
