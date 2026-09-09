@@ -43,6 +43,8 @@
 	..()
 	name = "skeleton"
 	real_name = "skeleton"
+	mob_biotypes = MOB_UNDEAD
+	add_faction(FACTION_UNDEAD)
 	if(length(quirks))
 		clear_quirks()
 	if(dna?.species)
