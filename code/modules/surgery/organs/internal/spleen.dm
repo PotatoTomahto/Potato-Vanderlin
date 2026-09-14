@@ -18,7 +18,7 @@
 	current_blood = 20
 	blood_req = 1
 	oxygen_req = 2
-	nutriment_req = 0.01
+	nutriment_req = 0.02
 	hydration_req = 0.01
 
 	/// How much blood the spleen regenerates per efficiency point per second

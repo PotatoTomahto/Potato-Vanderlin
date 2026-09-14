@@ -22,7 +22,7 @@
 	for(var/obj/item/organ/spleen/spleen as anything in spleens)
 		var/spleen_efficiency = spleen.get_slot_efficiency(ORGAN_SLOT_SPLEEN)
 		blood_regen += spleen.blood_regen_factor * spleen_efficiency
-		combined_nutrition_requirement += spleen.nutriment_req * spleen_efficiency * 0.02
+		combined_nutrition_requirement += spleen.nutriment_req * spleen_efficiency * 0.01
 	var/blood_restore_multiplier = 1 + owner.get_chem_effect(CE_BLOODRESTORE)
 	blood_regen *= blood_restore_multiplier
 	combined_nutrition_requirement *= blood_restore_multiplier
